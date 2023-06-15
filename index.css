@@ -10,10 +10,17 @@ h1{
     color: rgb(0, 0, 0);
     padding: 50px;
     border-radius: 30px;
-    margin: auto;
     margin: 20px;
 }
 h2{
+    box-shadow: 5px 5px 5px gray;
+    background-color: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    border-radius: 30px;
+    margin: 20px;
+}
+.page_desc{
     box-shadow: 5px 5px 5px gray;
     background-color: rgb(200, 200, 200);
     color: rgb(0, 0, 0);

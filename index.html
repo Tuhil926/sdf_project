@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Home page</title>
 </head>
 <body>
-    <h1>SDF Project</h1>
-    <h2>Welcome to [project name]! Tired of not being able to get CSS to work? Learn CSS now!</h2>
-    <div class="page_desc">
-        Simple interactive excercises to get you started
-        <br>
-        <img src="demo_1.png" alt="demo1">
+    <header>
+        <img id="logo" src="./Attributes/Images/logo.png" alt="logo">
+        <h1>SDF Project</h1>
+        <p id="userSettings">dropdown for user</p>
+    </header>
+    
+    <!-- <h2>Welcome to [project name]! Tired of not being able to get CSS to work? Learn CSS now!</h2> -->
+    <div class="slideshow">
+        <button class="slideshow_btn" onclick="doLeft()">&lt;</button>
+        <div class="container">
+            <div class="page_desc">
+                Simple interactive excercises to get you started
+                <br>
+                <img src="demo_1.png" alt="demo1" class="demo_img">
+            </div>
+            <div class="page_desc">
+                Learn more by trying things out
+                <br>
+                <img src="demo_1.png" alt="demo1" class="demo_img">
+            </div>
+            <div class="page_desc">
+                Quizzes at the end of each chapter to practice your skills
+                <br>
+                <img src="demo_1.png" alt="demo1" class="demo_img">
+            </div>
+        </div>
+        <button class="slideshow_btn" onclick="doRight()">&gt;</button>
     </div>
+    <script>
+        var scroll_amount = 1000;
+        function doRight(){
+            document.querySelector(".container").scrollLeft += scroll_amount;
+        }
+        function doLeft(){
+            document.querySelector(".container").scrollLeft -= scroll_amount;
+        }
+    </script>
 </body>
 </html>

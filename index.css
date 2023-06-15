@@ -1,30 +1,73 @@
 *{
-    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    /* justify-content: center; */
     text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-h1{
-    box-shadow: 5px 5px 5px gray;
-    font-size: 100px;
-    background-color: rgb(200, 200, 200);
-    color: rgb(0, 0, 0);
-    padding: 50px;
-    border-radius: 30px;
-    margin: 20px;
+body{
+    background-color: #FFEBB7;
 }
-h2{
-    box-shadow: 5px 5px 5px gray;
-    background-color: rgb(200, 200, 200);
-    color: rgb(0, 0, 0);
-    padding: 50px;
-    border-radius: 30px;
-    margin: 20px;
+header{
+    height:75px;
+    background-color: #243763;
+    display:flex;
+    justify-content:space-between;
+    color:bisque;
+    margin:auto;
+}
+#userSettings{
+    margin-right:40px;
+    font-size: 20px;
+    color:bisque;
+}
+.slideshow{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+.container{
+    display: flex;
+    width: 900px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overflow-x:hidden;
+}
+.slideshow_btn{
+    background-color: rgba(0, 0, 0, 0);
+    margin: 50px ;
+    width: 60px;
+    height: 120px;
+    font-size: 50px;
+    opacity: 30%;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+.slideshow_btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 100%;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+.slideshow_btn:active{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 100%;
+    transition: 0.05s;
+    transform: scale(0.95);
 }
 .page_desc{
-    box-shadow: 5px 5px 5px gray;
-    background-color: rgb(200, 200, 200);
+    /* display: inline-block; */
+    flex-shrink: 0;
+    /* box-shadow: 5px 5px 5px gray; */
+    background-color: #FF6E31;
     color: rgb(0, 0, 0);
-    padding: 50px;
+    padding: 20px;
+    width: 700px;
+    scroll-snap-align: center;
     border-radius: 30px;
-    margin: 20px;
+    margin: 0 100px;
+}
+.demo_img{
+    border-radius: 20px;
+    margin: 30px;
+    width: 500px;
 }

@@ -1,0 +1,6 @@
+Dashboard:
+    Header: #243763;
+    Progress Bar: #FF6969;
+    Welcome Text: #FF6E31 purple;
+    Motivation: #FFEBB7;
+    Footer: #AD8E70;

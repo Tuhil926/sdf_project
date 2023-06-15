@@ -1,0 +1,23 @@
+*{
+    font-size: 50px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    box-shadow: 5px 5px 5px gray;
+    font-size: 100px;
+    background-color: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    border-radius: 30px;
+    margin: auto;
+    margin: 20px;
+}
+h2{
+    box-shadow: 5px 5px 5px gray;
+    background-color: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    border-radius: 30px;
+    margin: 20px;
+}

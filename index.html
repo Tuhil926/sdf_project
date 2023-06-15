@@ -42,12 +42,31 @@
     </div>
     <script>
         var scroll_amount = 1000;
+        var img_no = 0;
+        var no_of_imgs = 3;
         function doRight(){
-            document.querySelector(".container").scrollLeft += scroll_amount;
+            img_no += 1;
+            if (img_no >= no_of_imgs){
+                img_no = 0;
+                document.querySelector(".container").scrollLeft = 0;
+            }else{
+                document.querySelector(".container").scrollLeft += scroll_amount;
+            }
         }
         function doLeft(){
-            document.querySelector(".container").scrollLeft -= scroll_amount;
+            img_no -= 1;
+            if (img_no < 0){
+                img_no = no_of_imgs - 1;
+                document.querySelector(".container").scrollLeft = no_of_imgs*scroll_amount;
+            }else{
+                document.querySelector(".container").scrollLeft -= scroll_amount;
+            }
         }
+        function recursive_repeat(){
+            doRight();
+            setTimeout(recursive_repeat, 3000);
+        }
+        setTimeout(recursive_repeat, 3000);
     </script>
 </body>
 </html>

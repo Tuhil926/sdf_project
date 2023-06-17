@@ -1,0 +1,119 @@
+header{
+    height:75px;
+    background-color: #243763;
+    display:flex;
+    justify-content:space-between;
+    margin:0;
+}
+
+.banner-btn {
+    display:flex;
+    justify-content:flex-end;
+    margin:8px;
+}
+
+.banner-btn a {
+
+    text-align:center;
+    color: white;
+    width: 150px;
+    margin: 10px 10px;
+    display: inline-block;
+    padding: 12px;
+    position: relative;
+    border: .5px solid #fff;
+    transition: color 1s;
+    z-index: 1;
+    text-decoration: none;
+
+}
+
+.banner-btn a span {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+
+
+}
+
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+.banner-btn a:hover {
+    color: #000;
+}
+body{
+    margin:0;
+}
+#logo{
+    
+} 
+.main {
+    display:flex;
+    justify-content: center;
+    height:100vh;
+}
+#pop { 
+    width:60%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height:80%;
+    margin:20px;
+    
+    
+  
+}
+#popup{
+    color:red;
+    width:90%;
+    /* text-align:center; */
+    height:100%;
+    background-color: #FFEBB7;
+}
+
+.heading {
+    text-align: center;
+}
+.form {
+    margin:50px;
+    width:60%;
+    display: block;
+    /* text-align: center; */
+    
+}
+.x {
+    margin-left:50px;
+    margin:30px;
+
+}
+input[type=text]
+{
+    border: none;
+  border-bottom: 2px solid red;
+}
+.y {
+    background-color: #FFEBB7;
+    margin-left:50px;
+    margin:30px;
+    border-bottom: #FFEBB7;
+    /* border-color: #FFEBB7; */
+
+
+}
+.pressButton {
+    margin-top:100px;
+    margin-left: 320px;
+    color:red;
+
+}
+#userSettings{
+    margin-right:40px;
+    color:bisque;
+}

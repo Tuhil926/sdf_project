@@ -10,61 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../Attributes/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Attributes/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Attributes/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="../Attributes/Favicon/site.webmanifest">
     <title>Home page</title>
 </head>
 <body>
-    <!-- <header>
-        <img id="logo" src="./Attributes/Images/logo.png" alt="logo">
-        <h1>SDF Project</h1>
-        <p id="userSettings">dropdown for user</p>
-    </header> -->
-
     <header>
         <img id="logo" src="./Attributes/Images/logo.png" alt="logo">
         <div class="banner-btn">
-            <a onclick="show()" href="#" id="sign_in"> <span></span>Sign Up</a>
-            <a href="#" id="sign_up"> <span></span>Sign In</a>
+            <a onclick="show1()" href="log_in/login.html" id="sign_in"> <span></span>Sign Up</a>
+            <a onclick="show2()" href="log_in/login.html" id="sign_up"> <span></span>Sign In</a>
         </div>
-
     </header>
-    <div class="main">
-        <div id="pop">
-            <div id="popup">
-                <h1 class ="heading">Sign Up</h1>
-                <form class = "form">
-                    <label class ="x" for name>First Name</label> 
-                    <br> 
-                    <input class ="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class ="x" for name>Last Name</label> 
-                    <br> 
-                    <input class ="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class ="x" for name>Phone Number</label> 
-                    <br> 
-                    <input class ="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class ="x" for name>E-mail Id</label> 
-                    <br> 
-                    <input class ="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                  
-                </form>
-                <button class ="pressButton">Sign Up</button>
-                <script>
-                    let click = document.getElementById("sign_in");
-                    let bs = document.getElementById("popup");
-                    bs.style.display = "none";
 
-                    function show() {
-                        bs.style.display = "block";
-                     
-                    }
-
-                </script>
-            </div>
-        </div>
-    </div>
+    
     
     <!-- <h2>Welcome to [project name]! Tired of not being able to get CSS to work? Learn CSS now!</h2> -->
     <div class="slideshow">

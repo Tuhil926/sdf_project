@@ -2,5 +2,10 @@ Dashboard:
     Header: #243763;
     Progress Bar: #FF6969;
     Welcome Text: #FF6E31 purple;
+    Lesson: #F6F1F1;
+    Lesson Name: black;
+    Lesson Enter Button:
+        On Normal: rgb(48, 200, 214);
+        On Hover: changing opacity to 0.7;
     Motivation: #FFEBB7;
     Footer: #AD8E70;

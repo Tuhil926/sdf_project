@@ -5,11 +5,14 @@ header{
     justify-content:space-between;
     margin:0;
 }
+#header-right{
+    width:135px;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
 body{
     margin:0;
-}
-#logo{
-    
 }
 #userSettings{
     margin-right:40px;
@@ -21,10 +24,6 @@ body{
     display:flex;
     align-items:center;
     justify-content: space-evenly;
-}
-#lessons{
-    height:80px;
-    background-color: #AD8E70;
 }
 #progress{
     height:380px;
@@ -49,7 +48,7 @@ body{
     font-size:30px;
 }
 .lesson{
-    width:555px;
+    width:550px;
     height:70px;
     display:flex;
     flex-direction: row;
@@ -60,7 +59,7 @@ body{
 }
 .lesson p{
     font-family: 'Poppins', sans-serif;
-    width:150px;
+    width:200px;
 }
 .btn{
     width:120px;
@@ -70,7 +69,38 @@ body{
     border-radius: 4px;
     color:white;
     font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
 }
-.btn:hover{
-    background-color:rgba(48, 200, 214,0.7);
+footer{
+    height:80px;
+    background-color: #AD8E70;
+}
+li{
+    list-style:none;
+    font-family: 'Ubuntu', sans-serif;
+    color:white;
+}
+ul{
+    margin:0;
+    height:80px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 100;
+  color:white;
+}
+#mode-switch{
+    all:unset;
+    cursor: pointer;
+}
+#settings-switch{
+    all:unset;
+    cursor: pointer;
 }

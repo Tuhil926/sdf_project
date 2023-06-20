@@ -5,6 +5,7 @@
 }
 body{
     background-color: #FFEBB7;
+    margin: 0;
 }
 header{
     height:75px;
@@ -24,6 +25,7 @@ header{
     justify-content: center;
     margin-top: 50px;
     align-items: center;
+    position :relative;
 }
 .container{
     display: flex;

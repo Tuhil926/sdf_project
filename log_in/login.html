@@ -39,7 +39,7 @@
                     <label class="x" for name>Password</label>
                     <br>
                     <input class="y" type="password" id ="name" value="Aditya"></input>
-                    
+
 
                 </form>
 
@@ -54,8 +54,8 @@
 
             </div>
             <div id="popup1">
-                <h1 class="heading1">Sign In</h1>
-                <form class="form1">
+                <h1 class="heading">Sign In</h1>
+                <form class="form">
                     <label class="x" for name>UserName</label>
                     <br>
                     <input class="y" type="text" id="name" value="Aditya"></input>
@@ -80,7 +80,7 @@
                    
                 </div>
                 <div class="buttondiv">
-                <button onclick="show2()" id="pressBelow">New User ? Sign Up </p>
+                <button onclick="show1()" id="pressBelow">New User ? Sign Up </p>
                     </button>
                     </div>
 
@@ -98,7 +98,7 @@
             let b = document.getElementById("popup1");
 
             function show1() {
-                bs.style.display = "block";
+                b.style.display = "block";
                 bs.style.zIndex = 3;
                 b.style.zIndex = 1;
 
@@ -108,7 +108,7 @@
             b.style.display = "none";
 
             function show2() {
-                b.style.display = "block";
+                bs.style.display = "block";
                 bs.style.zIndex = 1;
                 b.style.zIndex = 3;
 

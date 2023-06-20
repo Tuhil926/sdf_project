@@ -115,6 +115,16 @@ input[type=text]
 input[type=text]:focus {
     outline : none;
 }
+
+input[type=password]:focus {
+    outline : none;
+}
+input[type=password]
+{
+    border: none;
+  border-bottom: 2px solid gray;
+}
+
 .y {
     background-color: #FFEBB7;
     margin-left:50px;

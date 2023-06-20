@@ -66,16 +66,30 @@ body{
     align-items: center;
     height:80%;
     margin:20px;
+    z-index:1;
+    position:absolute;
     
     
   
 }
 #popup{
-    color:red;
+    color:black;
+    position:absolute;
     width:90%;
     /* text-align:center; */
     height:100%;
     background-color: #FFEBB7;
+    /* z-index:1; */
+}
+#popup1 {
+    
+    color:black;
+    position:absolute;
+    width:90%;
+    /* text-align:center; */
+    height:100%;
+    background-color: #FFEBB7;
+    z-index:4;
 }
 
 .heading {
@@ -96,7 +110,10 @@ body{
 input[type=text]
 {
     border: none;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid gray;
+}
+input[type=text]:focus {
+    outline : none;
 }
 .y {
     background-color: #FFEBB7;
@@ -107,11 +124,35 @@ input[type=text]
 
 
 }
-.pressButton {
-    margin-top:100px;
-    margin-left: 320px;
-    color:red;
+.buttondiv1 {
+    display:flex;
+    justify-content: center;
+}
 
+.buttondiv {
+    display:flex;
+    justify-content: center;
+}
+.pressButton {
+    display:flex;
+    justify-content: center;
+    width:250px;
+    height:40px;
+    /* margin-top:100px;
+    margin-left: 260px; */
+    color:black;
+    background-color: #FFEBB7;
+    border-color: black;
+    
+
+}
+#pressBelow {
+    
+    border:none;
+    background-color: #FFEBB7;
+    margin-top:5px;
+    color:blue;
+    font-style: italic;
 }
 #userSettings{
     margin-right:40px;

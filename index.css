@@ -24,6 +24,7 @@ header{
     justify-content: center;
     margin-top: 50px;
     align-items: center;
+    position :relative;
 }
 .container{
     display: flex;

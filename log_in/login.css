@@ -1,3 +1,4 @@
+
 header{
     height:75px;
     background-color: #243763;
@@ -5,7 +6,10 @@ header{
     justify-content:space-between;
     margin:0;
 }
+body {
+    background-color:  #FFEBB7;
 
+}
 .banner-btn {
     display:flex;
     justify-content:flex-end;
@@ -65,32 +69,53 @@ body{
     display:flex;
     justify-content:space-evenly;
     align-items: center;
-    height:100vh;
-    margin:20px;
-    z-index:1;
+    height:75%;
+    margin:40px;
     position:relative;
     
     
   
 }
+.heading {
+    font-size: 40px;
+}
+.image {
+    height:600px;
+    width:50%;
+   
+}
+.image1 {
+    height:100%;
+    width:100%;
+    /* border: 2px rebeccapurple solid; */
+}
+.image2 {
+    height:620px;
+    width:100%;
+    /* border: 2px rebeccapurple solid; */
+}
+.hj {
+    width:50%;
+    height:600px;
+}
 #popup{
     color:black;
     position:absolute;
-    width:90%;
+    width:50%;
     /* text-align:center; */
-    height:100%;
-    background-color: #FFEBB7;
+    height:620px;
+    background-color: lightblue;
     /* z-index:1; */
 }
 #popup1 {
     
     color:black;
     position:absolute;
-    width:90%;
+    width:50%;
     /* text-align:center; */
-    height:100%;
-    background-color: #FFEBB7;
-    z-index:4;
+    height:600px;
+    background-color: lightblue;
+   
 }
 
 .heading {
@@ -106,12 +131,15 @@ body{
 .x {
     margin-left:50px;
     margin:30px;
+    font-weight: bold;
+    font-size: 20px;
 
 }
 input[type=text]
 {
     border: none;
   border-bottom: 2px solid gray;
+  font-size: 15px;
 }
 input[type=text]:focus {
     outline : none;
@@ -119,30 +147,30 @@ input[type=text]:focus {
 
 input[type=password]:focus {
     outline : none;
+
 }
 input[type=password]
 {
     border: none;
   border-bottom: 2px solid gray;
+  font-size: 15px;
 }
 
 .y {
-    background-color: #FFEBB7;
+    background-color: lightblue;;
     margin-left:50px;
     margin:30px;
-    border-bottom: #FFEBB7;
+    border-bottom: lightblue;;
+    
     /* border-color: #FFEBB7; */
 
 
-}
-.buttondiv1 {
-    display:flex;
-    justify-content: center;
 }
 
 .buttondiv {
     display:flex;
     justify-content: center;
+    align-items: center;
 }
 .pressButton {
     display:flex;
@@ -151,19 +179,63 @@ input[type=password]
     height:40px;
     /* margin-top:100px;
     margin-left: 260px; */
+    align-items:center;
     color:black;
-    background-color: #FFEBB7;
+    background-color: lightblue;;
     border-color: black;
+    align-items: center;
+    border-radius: 20px;
+    cursor:pointer;
     
 
+}
+
+.buttondiv button{
+
+    text-align:center;
+    color: black;
+    width:250px;
+    height:40px;
+    /* margin: 10px 10px; */
+    display: inline-block;
+    /* padding: 12px; */
+    position: relative;
+     border-color: black; 
+    transition: color 1s;
+    z-index: 1;
+    border-radius: 20px;
+    /* text-decoration: none; */
+
+}
+
+.buttondiv button span {
+    width: 0%;
+    height: 100%;
+    background: #243763;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
+
+
+}
+
+.buttondiv button:hover span {
+    width: 100%;
+}
+
+.buttondiv :hover {
+    color:lightblue;;
 }
 #pressBelow {
     
     border:none;
-    background-color: #FFEBB7;
+    background-color: lightblue;;
     margin-top:5px;
     color:blue;
-    font-style: italic;
+    text-decoration: underline;
 }
 #userSettings{
     margin-right:40px;

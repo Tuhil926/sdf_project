@@ -16,75 +16,75 @@
 
 <body>
     <header>
-        <img id="logo" src="./logo.png" alt="logo">
+        <img id="logo" src="../Attributes/Favicon/logo.png" alt="logo">
         <div class="banner-btn">
-            <a onclick="show1()" href="#" id="sign_in"> <span></span>Sign Up</a>
-            <a onclick="show2()" href="#" id="sign_up"> <span></span>Sign In</a>
+            <a onclick="show1()" href="#" id="sign_up"> <span></span>Sign Up</a>
+            <a onclick="show2()" href="#" id="sign_in"> <span></span>Sign In</a>
         </div>
 
     </header>
     <div class="main">
         <div id="pop">
-            <div id="popup">
-                <h1 class="heading">Sign Up</h1>
-                <form class="form">
-                    <label class="x" for name>UserName</label>
-                    <br>
-                    <input class="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class="x" for name>E-mail Id</label>
-                    <br>
-                    <input class="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class="x" for name>Password</label>
-                    <br>
-                    <input class="y" type="password" id ="name" value="Aditya"></input>
-
-
-                </form>
-
-                <div class="buttondiv">
-                    <button class="pressButton">Sign Up</button> <br>
-                </div>
-                <div class="buttondiv">
-                <button onclick="show2()" id="pressBelow">Already have an account ? Sign in </p>
-                    </button>
-                    </div>
-
-
+            <div class="image">
+                <img class="image1" id="image1" src="../Attributes/Images/signup.jpg"></img>
+                <img class="image2" id ="image2" src="../Attributes/Images/sign_upp.png"></img>
             </div>
-            <div id="popup1">
-                <h1 class="heading">Sign In</h1>
-                <form class="form">
-                    <label class="x" for name>UserName</label>
-                    <br>
-                    <input class="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class="x" for name>Last Name</label>
-                    <br>
-                    <input class="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class="x" for name>Phone Number</label>
-                    <br>
-                    <input class="y" type="text" id="name" value="Aditya"></input>
-                    <br>
-                    <label class="x" for name>E-mail Id</label>
-                    <br>
-                    <input class="y" type="text" id="name" value="Aditya"></input>
-                    <br>
+            <div class="hj">
+                 <div id="popup">
+                    <h1 class="heading">Sign Up</h1>
+                    <form class="form">
+                        <label class="x" for name>UserName</label>
+                        <br>
+                        <input class="y" type="text" id="name" value="Aditya"></input>
+                        <br>
+                        <label class="x" for name>E-mail Id</label>
+                        <br>
+                        <input class="y" type="text" id="name" value="Aditya"></input>
+                        <br>
+                        <label class="x" for name>Password</label>
+                        <br>
+                        <input class="y" type="password" id="name" value="Aditya"></input>
+                        <br>
+                        <input class="z" type="checkbox" id="name">I agree to the terms and conditions </input>
 
-                </form>
 
-                <div class="buttondiv">
-                    <button class="pressButton">Sign In</button> <br>
-                   
-                </div>
-                <div class="buttondiv">
-                <button onclick="show1()" id="pressBelow">New User ? Sign Up </p>
-                    </button>
+                    </form>
+
+                    <div class="buttondiv">
+                        <button class="pressButton"><span></span>Sign Up</button> <br>
+                    </div>
+                    <div class="buttondiv">
+                        <button onclick="show2()" id="pressBelow">Already have an account ? Sign in </p>
+                        </button>
                     </div>
 
 
+                </div>
+                <div id="popup1">
+                    <h1 class="heading">Sign In</h1>
+                    <form class="form">
+                        <label class="x" for name>UserName</label>
+                        <br>
+                        <input class="y" type="text" id="name" value="Aditya"></input>
+                        <br>
+                        <label class="x" for name>Password</label>
+                        <br>
+                        <input class="y" type="password" id="name" value="Aditya"></input>
+                        <br>
+
+                    </form>
+
+                    <div class="buttondiv">
+                        <button class="pressButton"><span></span>Sign In</button> <br>
+
+                    </div>
+                    <div class="buttondiv">
+                        <button onclick="show1()" id="pressBelow">New User ? Sign Up </p>
+                        </button>
+                    </div>
+
+
+                </div>
             </div>
 
 
@@ -93,27 +93,36 @@
         </div>
         <script>
             let click = document.getElementById("sign_in");
+            let img1 = document.getElementById("image1");
+            let img2 = document.getElementById("image2");
             let bs = document.getElementById("popup");
             bs.style.display = "none";
             let b = document.getElementById("popup1");
+            img2.style.display ="none";
 
-            function show1() {
+            function show2() {
                 b.style.display = "block";
-                bs.style.zIndex = 3;
-                b.style.zIndex = 1;
+                bs.style.display = "none";
+                img1.style.display ="block";
+                img2.style.display ="none";
+
 
             }
 
             // let b = document.getElementById("popup1");
-            b.style.display = "none";
+            b.style.display = "block";
 
-            function show2() {
+            function show1() {
                 bs.style.display = "block";
-                bs.style.zIndex = 1;
-                b.style.zIndex = 3;
+                b.style.display = "none";
+                img1.style.display ="none";
+                img2.style.display="block";
+
 
 
             }
+
+
 
 
         </script>

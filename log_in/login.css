@@ -68,9 +68,9 @@ body{
     width:60%;
     display:flex;
     justify-content:space-evenly;
-    align-items: center;
+    /* align-items: center; */
     height:75%;
-    margin:40px;
+    margin:80px;
     position:relative;
     
     

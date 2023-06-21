@@ -4,7 +4,7 @@
     text-align: center;
 }
 body{
-    background-color: #FFEBB7;
+    background-color: rgb(255, 235, 183);
     margin: 0;
 }
 header{
@@ -12,7 +12,7 @@ header{
     background-color: #243763;
     display:flex;
     justify-content:space-between;
-    color:bisque;
+    /* color:bisque; */
     margin:auto;
 }
 #userSettings{

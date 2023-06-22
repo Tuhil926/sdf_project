@@ -10,33 +10,23 @@ body {
 }
 
 .question {
+    padding: 20px;
+    height: calc(70% - 75px - 40px);
+    overflow: scroll;
+}
+
+.left_panel {
     width: 50%;
-    height: 500px;
+    height: calc(100vh - 75px);
     background-color: aquamarine;
 }
-
-.solution {
-    width: 50%;
-    height: 500px;
-    background-color: blueviolet;
-}
-
-/* .editor {
-    padding: 5%;
-    width: 90%;
-    height: 300px;
-    background-color: rgb(45, 45, 45);
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-size: 20px;
-} */
 
 #editor,
 #highlighting {
     padding: 2.5%;
     border: 0;
     width: 45%;
-    height: 150px;
+    height: 30%;
 }
 
 #editor,
@@ -54,7 +44,7 @@ body {
 #editor,
 #highlighting {
     position: absolute;
-    top: 75px;
+    bottom: 0;
 }
 
 #editor {

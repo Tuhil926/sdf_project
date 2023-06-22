@@ -8,6 +8,8 @@ header{
 }
 body {
     background-color:  #FFEBB7;
+    margin:0;
+    height: 100vh;
 
 }
 .banner-btn {
@@ -53,16 +55,14 @@ body {
 .banner-btn a:hover {
     color: #000;
 }
-body{
-    margin:0;
-}
+
 #logo{
     
 } 
 .main {
     display:flex;
     justify-content: center;
-    height:100vh;
+    height: calc(100vh- 75px);
 }
 #pop { 
     width:60%;
@@ -236,6 +236,24 @@ input[type=password]
     margin-top:5px;
     color:blue;
     text-decoration: underline;
+}
+
+footer{
+    height:80px;
+    background-color: #AD8E70;
+}
+li{
+    list-style:none;
+    font-family: 'Ubuntu', sans-serif;
+    color:white;
+}
+ul{
+    margin:0;
+    height:80px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
 }
 #userSettings{
     margin-right:40px;

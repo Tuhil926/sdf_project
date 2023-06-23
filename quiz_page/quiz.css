@@ -2,6 +2,29 @@ body {
     background-color: #FFEBB7;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.082);
+    box-shadow: inset 0 0 5px rgba(141, 141, 141, 0.425);
+}
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0.082);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.29);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.29);
+}
+
 .quiz {
     background-color: aliceblue;
     width: 100%;
@@ -12,18 +35,22 @@ body {
 .result {
     width: 50%;
     overflow-y: auto;
+    font-size: 20px;
+    font-family: "Poppins";
 }
 
 .question {
     padding: 20px;
-    height: calc(70% - 75px - 40px);
+    height: calc(65% - 75px - 20px);
+    font-size: 20px;
+    font-family: "Poppins";
     overflow: auto;
 }
 
 .left_panel {
     width: 50%;
     height: calc(100vh - 75px);
-    background-color: aquamarine;
+    background-color: rgb(255, 151, 54);
 }
 
 #editor,

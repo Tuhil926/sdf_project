@@ -30,10 +30,15 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">LKsdf fhdks djhfksk dfs  sdj kf sdk fkdjskjdh fkjd kshfkjdksjf <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>fushfdsk</div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */</textarea>
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */</code></pre>
         </div>
-        <div class="result"></div>
+        <style id="result-style"></style>
+        <!-- <iframe src="result.html" class="result"></iframe> -->
+        <div class="result">
+            <div class="a">fdhskj</div>
+            <div class="b">sdkjhfk </div>
+        </div>
         
     </div>
 </body>
@@ -70,6 +75,12 @@ function check_tab(element, event) {
     element.selectionEnd = cursor_pos;
     update(element.value); // Update text to include indent
   }
+}
+function applyUserCSS(){
+    let usercss = document.getElementById("editor").value;
+    usercss = ".result" + usercss.replace("}", "} .result");
+    // console.log(usercss);
+    document.getElementById("result-style").innerHTML = usercss;
 }
 </script>
 </html>

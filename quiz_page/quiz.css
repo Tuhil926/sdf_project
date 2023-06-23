@@ -9,10 +9,15 @@ body {
 
 }
 
+.result {
+    width: 50%;
+    overflow-y: auto;
+}
+
 .question {
     padding: 20px;
     height: calc(70% - 75px - 40px);
-    overflow: scroll;
+    overflow: auto;
 }
 
 .left_panel {

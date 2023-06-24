@@ -22,7 +22,7 @@
         <img id="logo" src="./Attributes/Images/logo.png" alt="logo">
         <div class="banner-btn">
             <!-- <a onclick="show1()" href="log_in/login.html" id="sign_in"> <span></span>Sign Up</a> -->
-            <a onclick="show2()" href="log_in/login.html" id="sign_up"> <span></span>Get Started</a>
+            <a onclick="show2()" href="log_in/login.php" id="sign_up"> <span></span>Get Started</a>
         </div>
     </header>
 

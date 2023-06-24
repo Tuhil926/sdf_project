@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="../Attributes/Favicon/site.webmanifest">
 </head>
+
 <body>
     <header>
         <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
@@ -27,7 +29,14 @@
     </header>
     <div id="motivation">
         <div id="talk">
-            <h1 id="welcome">Welcome back, <span id="userName">UserName</span></h1>
+            <h1 id="welcome">Welcome back,
+                <?php
+                session_start();
+               echo '<span id="userName">' .$_SESSION["UserName"] . '</span>';
+
+                ?>
+
+            </h1>
             <q id="quot">Experience the power of CSS</q>
         </div>
         <div id="progress">
@@ -55,4 +64,5 @@
     </footer>
     <script src="./index.js"></script>
 </body>
+
 </html>

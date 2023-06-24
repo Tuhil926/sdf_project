@@ -1,4 +1,4 @@
-// 
+ 
 
 
 let click = document.getElementById("sign_in");
@@ -29,5 +29,10 @@ b.style.display = "block";
 
 
 
+}
+
+if (bool)
+{
+   show1();
 }
 

@@ -129,8 +129,8 @@ body {
     
 }
 .x {
-    margin-left:50px;
-    margin:30px;
+    margin-left:30px;
+    margin: 30px;
     font-weight: bold;
     font-size: 20px;
 
@@ -158,7 +158,7 @@ input[type=password]
 
 .y {
     background-color: lightblue;;
-    margin-left:50px;
+    margin-left: 10px;
     margin:30px;
     border-bottom: lightblue;;
     
@@ -171,6 +171,7 @@ input[type=password]
     display:flex;
     justify-content: center;
     align-items: center;
+    padding:top 10px;
 }
 .pressButton {
     display:flex;
@@ -186,11 +187,12 @@ input[type=password]
     align-items: center;
     border-radius: 20px;
     cursor:pointer;
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.6); */
     
 
 }
 
-.buttondiv button{
+.buttondiv input{
 
     text-align:center;
     color: black;
@@ -202,13 +204,13 @@ input[type=password]
     position: relative;
      border-color: black; 
     transition: color 1s;
-    z-index: 1;
+    /* z-index: 1; */
     border-radius: 20px;
     /* text-decoration: none; */
 
 }
 
-.buttondiv button span {
+/* .buttondiv span {
     width: 0%;
     height: 100%;
     background: #243763;
@@ -222,12 +224,12 @@ input[type=password]
 
 }
 
-.buttondiv button:hover span {
+.buttondiv:hover span {
     width: 100%;
-}
+} */
 
-.buttondiv :hover {
-    color:lightblue;;
+.pressButton :hover {
+    color:red;
 }
 #pressBelow {
     

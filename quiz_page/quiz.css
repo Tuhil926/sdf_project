@@ -37,6 +37,7 @@ body {
     overflow-y: auto;
     font-size: 20px;
     font-family: "Poppins";
+    background-color: aqua;
 }
 
 .question {
@@ -112,7 +113,8 @@ body {
 }
 
 #output {
-    font-size: 15px;
+    font-size: 30px;
+    overflow: hidden;
     /* opacity: 0.9;
     z-index: 2; */
 }
@@ -125,6 +127,12 @@ body {
     z-index: 1; */
 }
 
+#expected div {
+    font-size: 20px;
+    text-align: center;
+    margin: 100px;
+}
+
 .tab-bar {
     height: 25px;
     width: 100%;
@@ -132,6 +140,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: #8d8060;
 }
 
 .tab {
@@ -139,9 +148,12 @@ body {
     width: 50%;
     text-align: center;
     font-size: 15px;
-    border: 2px solid;
-    border-color: #70707070;
+    /* border: 2px solid;
+    border-color: #70707070; */
     border-radius: 5px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+
 }
 
 .tab:hover {
@@ -163,9 +175,17 @@ body {
     background-color: rgb(8, 196, 8);
     border-radius: 10px;
     display: none;
+    transition: 0.1s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 #next:hover {
     cursor: pointer;
     background-color: rgb(127, 234, 127);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.6);
+}
+
+#next:active {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    background-color: rgb(175, 245, 175);
 }

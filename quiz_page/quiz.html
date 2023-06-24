@@ -30,17 +30,29 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">LKsdf fhdks djhfksk dfs  sdj kf sdk fkdjskjdh fkjd kshfkjdksjf <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>fushfdsk</div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */</textarea>
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */</code></pre>
         </div>
         <style id="result-style"></style>
         <!-- <iframe src="result.html" class="result"></iframe> -->
         <div class="result">
-            <div class="a">fdhskj</div>
-            <div class="b">sdkjhfk </div>
+            <div class="tab-bar">
+                <div class="tab" id="output-tab" onclick="show_output()">Output</div>
+                <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
+            </div>
+            <div class="output" id="output">
+                <div class="a" id="a">fdhskj</div>
+                <div class="b">sdkjhfk </div>
+            </div>
+            <div id="expected">
+                <div class="a">fdhskj</div>
+                <div class="b">sdkjhfk </div>
+            </div>
         </div>
         
     </div>
+
+    <div id="next">Next</div>
 </body>
 <script src="../prism.js"></script>
 <script>
@@ -78,9 +90,51 @@ function check_tab(element, event) {
 }
 function applyUserCSS(){
     let usercss = document.getElementById("editor").value;
-    usercss = ".result" + usercss.replace("}", "} .result");
+    usercss = ".output" + usercss.replace("}", "} .output");
     // console.log(usercss);
     document.getElementById("result-style").innerHTML = usercss;
 }
+
+show_output();
+
+function show_output(){
+    let output = document.getElementById("output").style;
+    let expected = document.getElementById("expected").style;
+    let output_tab = document.getElementById("output-tab").style;
+    let expected_tab = document.getElementById("expected-tab").style;
+    expected_tab.backgroundColor = "#00000070";
+    output_tab.backgroundColor = "#F0F0F030";
+    output.zIndex = 2;
+    expected.zIndex = 1;
+}
+
+function show_expected(){
+    let output = document.getElementById("output").style;
+    let expected = document.getElementById("expected").style;
+    let output_tab = document.getElementById("output-tab").style;
+    let expected_tab = document.getElementById("expected-tab").style;
+    output_tab.backgroundColor = "#00000070";
+    expected_tab.backgroundColor = "#F0F0F030";
+    output.zIndex = 1;
+    expected.zIndex = 2;
+}
+
+function validate_ans(){
+    if (window.getComputedStyle(document.getElementById("a")).fontSize == "20px"){
+        return true;
+    }else{
+        console.log(window.getComputedStyle(document.getElementById("a")));
+        return false;
+    }
+}
+
+function try_show_newx_button(){
+    if (validate_ans()){
+        document.getElementById("next").style.display = "block";
+    }else{
+        document.getElementById("next").style.display = "none";
+    }
+}
+
 </script>
 </html>

@@ -102,3 +102,70 @@ body {
 #editor {
     resize: none;
 }
+
+#output,
+#expected {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #FFEBB7;
+}
+
+#output {
+    font-size: 15px;
+    /* opacity: 0.9;
+    z-index: 2; */
+}
+
+#expected {
+    width: 50%;
+    position: absolute;
+    top: 100px;
+    /* opacity: 0.9;
+    z-index: 1; */
+}
+
+.tab-bar {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tab {
+    background-color: rgba(148, 148, 148, 0.39);
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid;
+    border-color: #70707070;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+#next {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 3;
+    font-size: 25px;
+    width: 70px;
+    align-items: center;
+    text-align: center;
+    padding: 7px;
+    font-family: 'Poppins';
+    background-color: rgb(8, 196, 8);
+    border-radius: 10px;
+    display: none;
+}
+
+#next:hover {
+    cursor: pointer;
+    background-color: rgb(127, 234, 127);
+}

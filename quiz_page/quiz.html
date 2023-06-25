@@ -29,7 +29,12 @@
     </header>
     <div class="quiz">
         <div class="left_panel">
-            <div class="question">LKsdf fhdks djhfksk dfs  sdj kf sdk fkdjskjdh fkjd kshfkjdksjf <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>fushfdsk</div>
+            <div class="question">
+                <h1>Margins, text-align and font-size</h1>
+                Use your knowledge of margins, text-align and font-size to make the output look the same as the expected result.
+                The values for these parameters are mostly easy to figure out and not obscure values like 127 or something.
+                use the div selector only.
+            </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */</code></pre>
         </div>
@@ -52,7 +57,7 @@
         
     </div>
 
-    <div id="next">Next</div>
+    <div id="next" onclick="next_click()">Next</div>
 </body>
 <script src="../prism.js"></script>
 <script>
@@ -102,8 +107,10 @@ function show_output(){
     let expected = document.getElementById("expected").style;
     let output_tab = document.getElementById("output-tab").style;
     let expected_tab = document.getElementById("expected-tab").style;
-    expected_tab.backgroundColor = "#00000070";
-    output_tab.backgroundColor = "#F0F0F030";
+    output_tab.transition = "0.5s";
+    expected_tab.transition = "0.5s";
+    expected_tab.backgroundColor = "#8d8060";
+    output_tab.backgroundColor = "#FFEBB7";
     output.zIndex = 2;
     expected.zIndex = 1;
 }
@@ -113,14 +120,17 @@ function show_expected(){
     let expected = document.getElementById("expected").style;
     let output_tab = document.getElementById("output-tab").style;
     let expected_tab = document.getElementById("expected-tab").style;
-    output_tab.backgroundColor = "#00000070";
-    expected_tab.backgroundColor = "#F0F0F030";
+    output_tab.transition = "0.5s";
+    expected_tab.transition = "0.5s";
+    output_tab.backgroundColor = "#8d8060";
+    expected_tab.backgroundColor = "#FFEBB7";
     output.zIndex = 1;
     expected.zIndex = 2;
 }
 
 function validate_ans(){
-    if (window.getComputedStyle(document.getElementById("a")).fontSize == "20px"){
+    let a = window.getComputedStyle(document.getElementById("a"))
+    if (a.fontSize == "20px" && a.margin == "100px" && a.textAlign == "center"){
         return true;
     }else{
         console.log(window.getComputedStyle(document.getElementById("a")));
@@ -134,6 +144,10 @@ function try_show_newx_button(){
     }else{
         document.getElementById("next").style.display = "none";
     }
+}
+
+function next_click(){
+    alert("Congrats! You finished the quiz!")
 }
 
 </script>

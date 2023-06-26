@@ -31,7 +31,7 @@
         }
     </style>
     <?php
-    $namErr = $emailErr = $passErr = "";
+    $nameErr = $emailErr = $passErr = "";
     $username = $email_id = $password = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['form1'])) {
@@ -207,12 +207,12 @@
                         <label class="x" for name>UserName</label>
                         <br>
                         <input class="y" type="text" id="name" value="" name="UserName"></input>
-                        <span class="error"> <?php echo $nameErr; ?></span>
+                        <span class="error"> <?php echo "$nameErr"; ?></span>
                         <br>
                         <label class="x" for name>Password</label>
                         <br>
                         <input class="y" type="password" id="name" value="" name="Password"></input>
-                        <span class="error"> <?php echo $nameErr; ?></span>
+                        <span class="error"> <?php echo "$passErr"; ?></span>
                         <br>
 
 

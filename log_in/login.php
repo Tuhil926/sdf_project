@@ -32,7 +32,7 @@
     </style>
     <?php
     $namErr = $emailErr = $passErr = "";
-    $username=$email_id=$password="";
+    $username = $email_id = $password = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['form1'])) {
             $server = "localhost";
@@ -44,7 +44,7 @@
 
 
 
-            
+
             $showalert = false;
             $showerror = false;
             if (($_POST["UserName"] == "")) {
@@ -85,32 +85,32 @@
 
 
 
-            if ($row1[0] == 0 && $row3[0] == 0) {
-                $sql2 = "INSERT INTO sign_in VALUES (0, '$username', '$email_id', '$password', 0)";
-                $result = mysqli_query($connect, $sql2);
+                if ($row1[0] == 0 && $row3[0] == 0) {
+                    $sql2 = "INSERT INTO sign_in VALUES (0, '$username', '$email_id', '$password', 0)";
+                    $result = mysqli_query($connect, $sql2);
 
-                if ($result) {
-                    $showalert = true;
-                    mysqli_commit($connect);
-                    session_start();
-                    $_SESSION['UserName'] = $username;
-                    if (isset($_SESSION['UserName'])) {
-                        // Redirect to the login page
-                        header('Location: ../dashboard/index.php');
-                        exit(); // Ensure that the script stops executing
+                    if ($result) {
+                        $showalert = true;
+                        mysqli_commit($connect);
+                        session_start();
+                        $_SESSION['UserName'] = $username;
+                        if (isset($_SESSION['UserName'])) {
+                            // Redirect to the login page
+                            header('Location: ../dashboard/index.php');
+                            exit(); // Ensure that the script stops executing
+                        }
                     }
-                }
-            } else if ($row1[0])
-                echo " <script> alert('UserName already exists')
+                } else if ($row1[0]) {
+                    echo " <script> alert('UserName already exists')
                        bool = true;  
                 </script>";
-                } else
+                } else {
                     echo "<script> alert('Email-id already taken')
                 bool = true;
                 </script>";
-            }
-            else
-            {
+                }
+            } 
+            else {
                 echo "<script> bool = true </script>";
             }
         } else if (isset($_POST['form2'])) {
@@ -173,7 +173,7 @@
                     <form class="form" method="POST">
                         <label class="x" for name>UserName</label>
                         <br>
-                        <input class="y" type="text" id="name" value= "<?php echo "$username" ?>" name="UserName">
+                        <input class="y" type="text" id="name" value="<?php echo "$username" ?>" name="UserName">
                         <span class="error"> <?php echo $nameErr; ?></span>
                         <br>
                         <label class="x" for name>E-mail Id</label>

@@ -120,6 +120,15 @@ body {
     background-color: #FFEBB7;
 }
 
+#expected h1 {
+    font-size: 30px;
+    text-decoration: underline;
+    color:#ffff;
+}
+#expected p{
+    font-size: 20px;
+}
+
 #output {
     font-size: 30px;
     overflow: hidden;

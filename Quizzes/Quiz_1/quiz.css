@@ -128,9 +128,8 @@ body {
 }
 
 #expected div {
-    font-size: 20px;
-    text-align: center;
-    margin: 100px;
+    color: #FF2171;
+    font-size: 64px;
 }
 
 .tab-bar {

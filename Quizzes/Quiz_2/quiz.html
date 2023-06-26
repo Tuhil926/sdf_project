@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="../../Attributes/Favicon/site.webmanifest">
-    <title>Document</title>
+    <title>Quiz 2</title>
 </head>
 
 <body>
@@ -40,7 +40,10 @@
                     <li >
                         Change the size of heading to 30px and paragraph to 20px </li>
                     <li>
-                        Display the paragraph in "#ffff" and underline the heading 
+                        Display the paragraph in "#FF0000" and paragraph in rgb(67, 37, 250) 
+                    </li>
+                    <li>
+                        Underline the heading and check the paragraph for hints
                     </li>
                 </ul>
              
@@ -59,8 +62,8 @@
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-              <h1>Cascading Style Sheets</h1>
-              <p>CSS is widely used to style pages ! Here You are using to style this paragraph.
+              <h1 id="a">Cascading Style Sheets</h1>
+              <p id="b">CSS is widely used to style pages ! Here You are using to style this paragraph.
                 There are many features of CSS . 
                 Underine the heading using text-decoration . Feel free to play around with it ! 
 
@@ -150,13 +153,10 @@
     }
 
     function validate_ans() {
+        
         let a = window.getComputedStyle(document.getElementById("a"));
         let b = window.getComputedStyle(document.getElementById("b"));
-        
-        console.log(a);
-        console.log(b);
-        if (a.fontSize == "30px" && b.fontSize == "20px" 
-        && a.color == "rgb(255,0,0)" && b.color== "rgb(67,37,250)") {
+        if (a.fontSize=="30px"&&a.color=="rgb(255, 0, 0)"&&b.fontSize=="20px"&&b.color=="rgb(67, 37, 250)"&&a.textDecorationStyle=="solid") {
             return true;
         } else {
             console.log(window.getComputedStyle(document.getElementById("a")));

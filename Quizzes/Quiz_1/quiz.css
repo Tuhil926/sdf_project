@@ -1,0 +1,191 @@
+body {
+    background-color: #FFEBB7;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.082);
+    box-shadow: inset 0 0 5px rgba(141, 141, 141, 0.425);
+}
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0.082);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.29);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.29);
+}
+
+.quiz {
+    background-color: aliceblue;
+    width: 100%;
+    display: flex;
+
+}
+
+.result {
+    width: 50%;
+    overflow-y: auto;
+    font-size: 20px;
+    font-family: "Poppins";
+    background-color: aqua;
+}
+
+.question {
+    padding: 20px;
+    height: calc(65% - 75px - 20px);
+    font-size: 20px;
+    font-family: "Poppins";
+    overflow: auto;
+}
+
+.left_panel {
+    width: 50%;
+    height: calc(100vh - 75px);
+    background-color: rgb(255, 151, 54);
+}
+
+#editor,
+#highlighting {
+    padding: 2.5%;
+    border: 0;
+    width: 45%;
+    height: 30%;
+}
+
+#editor,
+#highlighting,
+#highlighting * {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 25px;
+    text-align: left;
+    background-color: #2d2d2d;
+}
+
+#editor,
+#highlighting {
+    position: absolute;
+    bottom: 0;
+}
+
+#editor {
+    z-index: 1;
+}
+
+#highlighting {
+    z-index: 0;
+}
+
+#editor {
+    color: transparent;
+    background: transparent;
+    caret-color: white;
+}
+
+#editor,
+#highlighting {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#editor {
+    resize: none;
+}
+
+#output,
+#expected {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #FFEBB7;
+}
+
+#output {
+    font-size: 30px;
+    overflow: hidden;
+    /* opacity: 0.9;
+    z-index: 2; */
+}
+
+#expected {
+    width: 50%;
+    position: absolute;
+    top: 100px;
+    /* opacity: 0.9;
+    z-index: 1; */
+}
+
+#expected div {
+    font-size: 20px;
+    text-align: center;
+    margin: 100px;
+}
+
+.tab-bar {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8d8060;
+}
+
+.tab {
+    background-color: rgba(148, 148, 148, 0.39);
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+    /* border: 2px solid;
+    border-color: #70707070; */
+    border-radius: 5px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+#next {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 3;
+    font-size: 25px;
+    width: 70px;
+    align-items: center;
+    text-align: center;
+    padding: 7px;
+    font-family: 'Poppins';
+    background-color: rgb(8, 196, 8);
+    border-radius: 10px;
+    display: none;
+    transition: 0.1s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+#next:hover {
+    cursor: pointer;
+    background-color: rgb(127, 234, 127);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.6);
+}
+
+#next:active {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    background-color: rgb(175, 245, 175);
+}

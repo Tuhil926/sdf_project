@@ -47,7 +47,15 @@ body {
     font-family: "Poppins";
     overflow: auto;
 }
-
+.list {
+    display:block;
+}
+.list li
+{
+    color:black;
+    list-style:disc;
+    line-height: 25px;
+}
 .left_panel {
     width: 50%;
     height: calc(100vh - 75px);

@@ -122,11 +122,12 @@ body {
 
 #expected h1 {
     font-size: 30px;
-    text-decoration: underline;
-    color:#ffff;
+    text-decoration:underline;
+    color:#ff0000;
 }
 #expected p{
     font-size: 20px;
+    color:rgb(67,37,250);
 }
 
 #output {

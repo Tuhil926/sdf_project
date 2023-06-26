@@ -150,8 +150,13 @@
     }
 
     function validate_ans() {
-        let a = window.getComputedStyle(document.getElementById("a"))
-        if (a.fontSize == "20px" && a.margin == "100px" && a.textAlign == "center") {
+        let a = window.getComputedStyle(document.getElementById("a"));
+        let b = window.getComputedStyle(document.getElementById("b"));
+        
+        console.log(a);
+        console.log(b);
+        if (a.fontSize == "30px" && b.fontSize == "20px" 
+        && a.color == "rgb(255,0,0)" && b.color== "rgb(67,37,250)") {
             return true;
         } else {
             console.log(window.getComputedStyle(document.getElementById("a")));

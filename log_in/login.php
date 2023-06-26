@@ -84,26 +84,24 @@
                 $row3 = mysqli_fetch_array($result3);
 
 
-                
-                if ($row1[0] == 0 && $row3[0] == 0) {
-                    $sql2 = "INSERT INTO sign_in VALUES (0, '$username', '$email_id', '$password', 0)";
-                    $result = mysqli_query($connect, $sql2);
-                    echo "<h1> $result </h1>";
-                    if ($result) {
-                        $showalert = true;
-                        mysqli_commit($connect);
-                        session_start();
-                         $_SESSION['UserName'] = $username;
-                         echo "<h1> hello </h1>";
-                        // if (isset($_SESSION['UserName'])) {
-                            // Redirect to the login page
-                            header('Location: ../dashboard/index.php');
-                            exit(); // Ensure that the script stops executing
-                        // }
+
+            if ($row1[0] == 0 && $row3[0] == 0) {
+                $sql2 = "INSERT INTO sign_in VALUES (0, '$username', '$email_id', '$password', 0)";
+                $result = mysqli_query($connect, $sql2);
+
+                if ($result) {
+                    $showalert = true;
+                    mysqli_commit($connect);
+                    session_start();
+                    $_SESSION['UserName'] = $username;
+                    if (isset($_SESSION['UserName'])) {
+                        // Redirect to the login page
+                        header('Location: ../dashboard/index.php');
+                        exit(); // Ensure that the script stops executing
                     }
-                } else if ($row1[0]) {
-                    $nameErr = "Userame already taken";
-                    echo " <script> alert('{$nameErr}')
+                }
+            } else if ($row1[0])
+                echo " <script> alert('UserName already exists')
                        bool = true;  
                 </script>";
                 } else

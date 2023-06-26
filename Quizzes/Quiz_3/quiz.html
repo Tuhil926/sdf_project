@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../prism.css">
+    <link rel="stylesheet" href="./quiz.css">
+    <link rel="stylesheet" href="../dashboard/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../Attributes/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Attributes/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Attributes/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="../Attributes/Favicon/site.webmanifest">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
+        <div id="header-right">
+            <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
+            <button id="settings-switch"><span class="material-symbols-outlined">settings</span></button>
+        </div>
+    </header>
+    <div class="quiz">
+        <div class="left_panel">
+            <div class="question">
+                <h1>Margins, text-align and font-size</h1>
+                Use your knowledge of margins, text-align and font-size to make the output look the same as the expected result.
+                The values for these parameters are mostly easy to figure out and not obscure values like 127 or something.
+                use the div selector only.
+            </div>
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */</textarea>
+            <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */</code></pre>
+        </div>
+        <style id="result-style"></style>
+        <!-- <iframe src="result.html" class="result"></iframe> -->
+        <div class="result">
+            <div class="tab-bar">
+                <div class="tab" id="output-tab" onclick="show_output()">Output</div>
+                <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
+            </div>
+            <div class="output" id="output">
+                <div class="a" id="a">fdhskj</div>
+                <div class="b">sdkjhfk </div>
+            </div>
+            <div id="expected">
+                <div class="a">fdhskj</div>
+                <div class="b">sdkjhfk </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="next" onclick="next_click()">Next</div>
+</body>
+<script src="../prism.js"></script>
+<script>
+function update(text) {
+  let result_element = document.querySelector("#highlighting-content");
+  // Update code
+  if(text[text.length-1] == "\n") { // If the last character is a newline character
+    text += " "; // Add a placeholder space character to the final line 
+  }
+  result_element.innerHTML = text.replace(new RegExp("&", "g"), "&").replace(new RegExp("<", "g"), "<");
+  // Syntax Highlight
+  Prism.highlightElement(result_element);
+}
+function sync_scroll(element) {
+  /* Scroll result to scroll coords of event - sync with textarea */
+  let result_element = document.querySelector("#highlighting");
+  // Get and set x and y
+  result_element.scrollTop = element.scrollTop;
+  result_element.scrollLeft = element.scrollLeft;
+}
+function check_tab(element, event) {
+  let code = element.value;
+  if(event.key == "Tab") {
+    /* Tab key pressed */
+    event.preventDefault(); // stop normal
+    let before_tab = code.slice(0, element.selectionStart); // text before tab
+    let after_tab = code.slice(element.selectionEnd, element.value.length); // text after tab
+    let cursor_pos = element.selectionEnd + 1; // where cursor moves after tab - moving forward by 1 char to after tab
+    element.value = before_tab + " " + after_tab; // add tab char
+    // move cursor
+    element.selectionStart = cursor_pos;
+    element.selectionEnd = cursor_pos;
+    update(element.value); // Update text to include indent
+  }
+}
+function applyUserCSS(){
+    let usercss = document.getElementById("editor").value;
+    usercss = ".output" + usercss.replace("}", "} .output");
+    // console.log(usercss);
+    document.getElementById("result-style").innerHTML = usercss;
+}
+
+show_output();
+
+function show_output(){
+    let output = document.getElementById("output").style;
+    let expected = document.getElementById("expected").style;
+    let output_tab = document.getElementById("output-tab").style;
+    let expected_tab = document.getElementById("expected-tab").style;
+    output_tab.transition = "0.5s";
+    expected_tab.transition = "0.5s";
+    expected_tab.backgroundColor = "#8d8060";
+    output_tab.backgroundColor = "#FFEBB7";
+    output.zIndex = 2;
+    expected.zIndex = 1;
+}
+
+function show_expected(){
+    let output = document.getElementById("output").style;
+    let expected = document.getElementById("expected").style;
+    let output_tab = document.getElementById("output-tab").style;
+    let expected_tab = document.getElementById("expected-tab").style;
+    output_tab.transition = "0.5s";
+    expected_tab.transition = "0.5s";
+    output_tab.backgroundColor = "#8d8060";
+    expected_tab.backgroundColor = "#FFEBB7";
+    output.zIndex = 1;
+    expected.zIndex = 2;
+}
+
+function validate_ans(){
+    let a = window.getComputedStyle(document.getElementById("a"))
+    if (a.fontSize == "20px" && a.margin == "100px" && a.textAlign == "center"){
+        return true;
+    }else{
+        console.log(window.getComputedStyle(document.getElementById("a")));
+        return false;
+    }
+}
+
+function try_show_newx_button(){
+    if (validate_ans()){
+        document.getElementById("next").style.display = "block";
+    }else{
+        document.getElementById("next").style.display = "none";
+    }
+}
+
+function next_click(){
+    alert("Congrats! You finished the quiz!")
+}
+
+</script>
+</html>

@@ -30,12 +30,25 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>In a fix</h1>
-                There is a class by name "test".<br> Fix it. <br> Hint: align text
+                <h1>Lots of mistakes</h1>
+                The class name for the top and bottom texts is "test1".<br><br>
+                The class name for the middle div is "test2" <br><br>
+                all the values already present are correct, you'll just have to correct the names of the attributes and add some things<br><br>
+                The height fo the middle div is a multiple of 10<br><br>
+                The values of margin and padding are also multiples of 10<br><br>
+                Note: border-radius is used to give an element curved corners, like the middle div.<br><br>
+                Hint: the middle div is invisible in the output because it's default height is zero<br>
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
-#test{
-    progress: none;
+test1{
+    fontSize: 30px;
+    textAlign: center;
+    margin: 20px;
+    backgroundColor: #cbba8e;
+}
+#test2{
+    backgroundColor: #8d8060;
+    borderRadius: 40px;
 }
             </textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
@@ -48,9 +61,13 @@
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-                <div class="test">Fixing code is a healthy practice.</div>
+                <div class="test1" id="res1">Fixing code is a healthy practice.</div>
+                <div class="test2" id="res2"></div>
+                <div class="test1">Fixing code is a healthy practice.</div>
             </div>
             <div id="expected">
+                <div class="a">Fixing code is a healthy practice.</div>
+                <div class="b"></div>
                 <div class="a">Fixing code is a healthy practice.</div>
             </div>
         </div>
@@ -129,12 +146,13 @@ function show_expected(){
 }
 
 function validate_ans(){
-    let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
-    console.log(a);
-    if (a.fontSize == "24px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)"){
+    let a = window.getComputedStyle(document.getElementById("res1"));
+    let b = window.getComputedStyle(document.getElementById("res2"));
+    // console.log(b.backgroundColor);
+    if (a.fontSize=="30px"&&a.textAlign=="center"&&a.margin=="20px"&&a.padding=="20px"&&a.backgroundColor=="rgb(203, 186, 142)"&&a.opacity=="0.5"&&b.height=="200px"&&b.backgroundColor=="rgb(141, 128, 96)"&&b.borderRadius=="40px"){
         return true;
     }else{
-        console.log(window.getComputedStyle(document.getElementById("a")));
+        // console.log(window.getComputedStyle(document.getElementById("a")));
         return false;
     }
 }

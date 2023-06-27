@@ -113,7 +113,7 @@ body {
 }
 
 #output {
-    font-size: 30px;
+    /* font-size: 30px; */
     overflow: hidden;
     /* opacity: 0.9;
     z-index: 2; */
@@ -133,10 +133,17 @@ body {
     margin: 100px;
 } */
 .a{
-    color:rgb(0,0,0);
-    font-size: 24px;
-    text-align:center;
-    background-color: rgb(255,255,255);
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #cbba8e;
+    opacity: 0.5;
+}
+.b{
+    height: 200px;
+    background-color: #8d8060;
+    border-radius: 40px;
 }
 .tab-bar {
     height: 25px;

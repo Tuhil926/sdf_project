@@ -24,7 +24,11 @@
         <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
             <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
-            <button id="settings-switch"><span class="material-symbols-outlined">settings</span></button>
+            <!-- <button id="settings-switch" onclick=""> -->
+            <!-- <span class="material-symbols-outlined">Settings</span></button>
+            <label for="cars"></label>
+            <select name="cars" id="cars">
+                <option  value="Log Out">Log Out</option> -->
         </div>
     </header>
     <div id="motivation">
@@ -32,7 +36,7 @@
             <h1 id="welcome">Welcome back,
                 <?php
                 session_start();
-               echo '<span id="userName">' .$_SESSION["UserName"] . '</span>';
+                echo '<span id="userName">' . $_SESSION["UserName"] . '</span>';
 
                 ?>
 

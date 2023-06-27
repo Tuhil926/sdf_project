@@ -132,11 +132,15 @@ body {
     text-align: center;
     margin: 100px;
 } */
-.a{
-    color:rgb(0,0,0);
-    font-size: 24px;
-    text-align:center;
-    background-color: rgb(255,255,255);
+#a{
+    font-size:24px;
+    color: #17594A;
+    border:10px solid;
+    border-color: #213363;
+    display:block;
+}
+#b{
+    display:none;
 }
 .tab-bar {
     height: 25px;

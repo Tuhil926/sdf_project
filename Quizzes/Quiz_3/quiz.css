@@ -127,12 +127,17 @@ body {
     z-index: 1; */
 }
 
-#expected div {
+/* #expected div {
     font-size: 20px;
     text-align: center;
     margin: 100px;
+} */
+.a{
+    color:rgb(0,0,0);
+    font-size: 24px;
+    text-align:center;
+    background-color: rgb(255,255,255);
 }
-
 .tab-bar {
     height: 25px;
     width: 100%;

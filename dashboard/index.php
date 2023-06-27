@@ -21,15 +21,59 @@
 
 <body>
     <header>
+
+        <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
         <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
             <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
-            <!-- <button id="settings-switch" onclick=""> -->
-            <!-- <span class="material-symbols-outlined">Settings</span></button>
-            <label for="cars"></label>
+            <div id="dropdown">
+                <button id="settings-switch" >
+                    <span class="material-symbols-outlined">Settings</span></button>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+
+            <!-- <label for="cars"></label> 
             <select name="cars" id="cars">
-                <option  value="Log Out">Log Out</option> -->
+                 <option  value="Log Out">Log Out</option>  -->
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var dropdownButton = document.getElementById('settings-switch');
+                var dropdownContent = document.querySelector('.dropdown-content');
+
+                dropdownButton.addEventListener('click', function() {
+                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!dropdownButton.contains(event.target)) {
+                        dropdownContent.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </header>
     <div id="motivation">
         <div id="talk">

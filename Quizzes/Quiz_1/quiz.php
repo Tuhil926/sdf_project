@@ -29,7 +29,7 @@
     $connect = mysqli_connect($server, $Username, $Password, $database);
     session_start();
     $name = $_SESSION['UserName'];
-    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 0)
+    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 3)
         header('Location: ../../log_in/login.php');
     else {
         $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");

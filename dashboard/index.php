@@ -111,13 +111,23 @@
                                 window.location.href = '../Basics%20of%20CSS/Lesson%201/';
                             
                             }); </script>";
-                    } else if ($_SESSION["progress"] < 10) {
+                    } else if ($_SESSION["progress"] < 3) {
                         echo "Continue";
                         echo " 
                             <script>let var1 = document.getElementById('lesson1Button');
-
+                            
                             var1.addEventListener('click',function(){
+                               
                                 window.location.href = ' ../Basics%20of%20CSS/Lesson%20" . $_SESSION["progress"] . "./';
+                            }); </script>";
+                    } else if ($_SESSION["progress"] < 6) {
+
+                        echo "Continue";
+                        echo " 
+                            <script>let var1 = document.getElementById('lesson1Button');
+                            
+                            var1.addEventListener('click',function(){
+                                window.location.href = ' ../Quizes/Quiz_" . ($_SESSION["progress"] - 2) . "./';
                             }); </script>";
                     } else {
                         echo "Revise";
@@ -136,14 +146,57 @@
                 <p>Essentials of CSS</p>
                 <button id="lesson2Button" class="btn">
                     <?php
-                    if ($_SESSION["progress"] == 10) {
+                    if ($_SESSION["progress"] == 6) {
                         echo "Get Started";
+
+                        $server = "localhost";
+                        $Username = "root";
+                        $Password = "";
+                        $database = "Details";
+
+                        $connect = mysqli_connect($server, $Username, $Password, $database);
+                        session_start();
+                        $name = $_SESSION['UserName'];
+                        if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 6)
+                            header('Location: ../../log_in/login.php');
+                        else {
+                            $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
+                            $row1 = mysqli_fetch_array($result1);
+                            // echo "<script> alert('value of progress is $row1[0]'); </script> ";
+                            // if ($row1[0] > 3)
+                            //     $updating = $row1[0];
+                            // else
+                            //     $updating = 3;
+                            $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = 10 WHERE UserName='$name';");
+                            $_SESSION['progress'] = 10;
+                            mysqli_commit($connect);
+                            echo " 
+                            <script>let var1 = document.getElementById('lesson1Button');
+                                var1.addEventListener('click',function(){
+                                window.location.href = '../Essentials%20of%20CSS/Lesson%201/';
+                           
+                            
+                            }); </script>";
+                        }
                     } else if ($_SESSION["progress"] < 10) {
                         echo "Locked";
                     } else if ($_SESSION["progress"] < 20) {
                         echo "Continue";
+                        echo " 
+                        <script>let var1 = document.getElementById('lesson2Button');
+                            var1.addEventListener('click',function(){
+                            window.location.href = '../Essentials%20of%20CSS/Lesson%20" . ($_SESSION['PROGRESS'] - 9) . "/';
+                       
+                        }); </script>";
                     } else {
                         echo "Revise";
+                        echo " 
+                            <script>let var1 = document.getElementById('lesson2Button');
+                                var1.addEventListener('click',function(){
+                                window.location.href = '../Essentials%20of%20CSS/Lesson%201/';
+                           
+                            
+                            }); </script>";
                     }
                     ?>
                 </button>
@@ -152,14 +205,57 @@
                 <p>Advanced CSS</p>
                 <button id="lesson3Button" class="btn">
                     <?php
-                    if ($_SESSION["progress"] == 20) {
+                    if ($_SESSION["progress"] == 17) {
                         echo "Get Started";
+                        $server = "localhost";
+                        $Username = "root";
+                        $Password = "";
+                        $database = "Details";
+
+                        $connect = mysqli_connect($server, $Username, $Password, $database);
+                        session_start();
+                        $name = $_SESSION['UserName'];
+                        if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 6)
+                            header('Location: ../../log_in/login.php');
+                        else {
+                            $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
+                            $row1 = mysqli_fetch_array($result1);
+                            // echo "<script> alert('value of progress is $row1[0]'); </script> ";
+                            // if ($row1[0] > 3)
+                            //     $updating = $row1[0];
+                            // else
+                            //     $updating = 3;
+                            $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = 20 WHERE UserName='$name';");
+                            $_SESSION['progress'] = 20;
+                            mysqli_commit($connect);
+                            echo " 
+                            <script>let var1 = document.getElementById('lesson3Button');
+                                var1.addEventListener('click',function(){
+                                window.location.href = '../Advanced%20CSS/Lesson%201/';
+                           
+                            
+                            }); </script>";
+                        }
+
                     } else if ($_SESSION["progress"] < 20) {
                         echo "Locked";
                     } else if ($_SESSION["progress"] < 30) {
                         echo "Continue";
+                        echo " 
+                        <script>let var1 = document.getElementById('lesson3Button');
+                            var1.addEventListener('click',function(){
+                            window.location.href = '../Advanced%20CSS/Lesson%20".($_SESSION['poregress-19'])."/';
+                        }); </script>";
+
                     } else {
                         echo "Revise";
+                        echo " 
+                        <script>let var1 = document.getElementById('lesson3Button');
+                            var1.addEventListener('click',function(){
+                            window.location.href = '../Advanced%20CSS/Lesson%201/';
+                       
+                        
+                        }); </script>";
                     }
                     ?>
                 </button>

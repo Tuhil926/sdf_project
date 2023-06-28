@@ -85,6 +85,10 @@
             <h1 id="welcome">Welcome back,
                 <?php
                 session_start();
+                if (!isset($_SESSION["progress"])){
+                    header('Location: ../log_in/login.php');
+                    exit();
+                }
                 echo '<span id="userName">' . $_SESSION["UserName"] . '</span>';
 
                 ?>
@@ -95,15 +99,35 @@
         <div id="progress">
             <div id="lesson1" class="lesson">
                 <p>Introduction to CSS</p>
-                <button id="lesson1Button" class="btn">Get Started</button>
+                <button id="lesson1Button" class="btn">
+                    <?php 
+                        if ($_SESSION["progress"] == 0){echo "Get Started";} 
+                        else if ($_SESSION["progress"] < 10){echo "Continue";}
+                        else {echo "Revise";}
+                    ?>
+                </button>
             </div>
             <div id="lesson2" class="lesson">
                 <p>Essentials of CSS</p>
-                <button id="lesson2Button" class="btn">Locked</button>
+                <button id="lesson2Button" class="btn">
+                    <?php 
+                        if ($_SESSION["progress"] == 10){echo "Get Started";} 
+                        else if ($_SESSION["progress"] < 10){echo "Locked";}
+                        else if ($_SESSION["progress"] < 20){echo "Continue";}
+                        else {echo "Revise";}
+                    ?>
+                </button>
             </div>
             <div id="lesson3" class="lesson">
                 <p>Advanced CSS</p>
-                <button id="lesson3Button" class="btn">Locked</button>
+                <button id="lesson3Button" class="btn">
+                    <?php 
+                        if ($_SESSION["progress"] == 20){echo "Get Started";} 
+                        else if ($_SESSION["progress"] < 20){echo "Locked";}
+                        else if ($_SESSION["progress"] < 30){echo "Continue";}
+                        else {echo "Revise";}
+                    ?>
+                </button>
             </div>
         </div>
     </div>

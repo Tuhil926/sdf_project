@@ -95,6 +95,10 @@
                         session_start();
                         $_SESSION['UserName'] = $username;
                         if (isset($_SESSION['UserName'])) {
+                            $result4 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$username';");
+                            $row4 = mysqli_fetch_array($result4);
+                            $_SESSION["progress"] = $row4[0];
+
                             // Redirect to the login page
                             header('Location: ../dashboard/index.php');
                             exit(); // Ensure that the script stops executing
@@ -142,6 +146,10 @@
                 session_start();
                 $_SESSION['UserName'] = $username;
                 if (isset($_SESSION['UserName'])) {
+                    $result4 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$username';");
+                    $row4 = mysqli_fetch_array($result4);
+                    $_SESSION["progress"] = $row4[0];
+                    // if (isset($_SESSION["progress"])){echo "<h1>sdkjf</h1>";}
                     // Redirect to the login page
                     header('Location: ../dashboard/index.php');
                     exit(); // Ensure that the script stops executing

@@ -32,13 +32,17 @@
     $connect = mysqli_connect($server, $Username, $Password, $database);
     session_start();
     $name = $_SESSION['UserName'];
-    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 1)
+    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 0)
         header('Location: ../../log_in/login.php');
     else {
         $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
         $row1 = mysqli_fetch_array($result1);
-        echo "<script> alert('value of progress is $row1[0]'); </script> ";
-        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = 2 WHERE UserName='$name';");
+        // echo "<script> alert('value of progress is $row1[0]'); </script> ";
+        if ($row1[0] > 2)
+        $updating = $row1[0];
+        else
+        $updating = 2;
+        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating[0] WHERE UserName='$name';");
         $_SESSION['progress'] = 2;
         mysqli_commit($connect);
     }

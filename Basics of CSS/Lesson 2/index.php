@@ -37,8 +37,12 @@
     else {
         $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
         $row1 = mysqli_fetch_array($result1);
-        echo "<script> alert('value of progress is $row1[0]'); </script> ";
-        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = 1 WHERE UserName='$name';");
+        // echo "<script> alert('value of progress is $row1[0]'); </script> ";
+        if ($row1[0] > 1)
+        $updating = $row1[0];
+        else
+        $updating = 1;
+        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating[0] WHERE UserName='$name';");
         $_SESSION['progress'] = 1;
         mysqli_commit($connect);
     }

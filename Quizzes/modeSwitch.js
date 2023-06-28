@@ -14,6 +14,10 @@ function darkMode()
     $(".left_panel").fadeOut("fast");
     $(".left_panel").css("background-color","#66347F");
     $(".left_panel").fadeIn("fast");
+    $(".left_panel").css("color","white");
+    $("#expected").css("color","white");
+    $("#output").css("color","white");
+    $(".tab").css("color","white");
     $(".tab-bar").css("background-color","#003519");
     // $(".result").css("background-color","#009FBD");
     $("#expected").css("background-color","#004D24");
@@ -30,7 +34,11 @@ function lightMode()
     $(".left_panel").fadeIn("fast");
     $("#expected").css("background-color","#FFEBB7");
     $("#output").css("background-color","#FFEBB7");
-    $(".tab-bar").css("background-color","#FFEBB7");
+    $(".tab-bar").css("background-color","#8d8060");
+    $(".left_panel").css("color","black");
+    $("#expected").css("color","black");
+    $("#output").css("color","black");
+    $(".tab").css("color","black");
     show_output();
 }
 function show_output() {

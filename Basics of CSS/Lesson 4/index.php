@@ -23,6 +23,27 @@
 </head>
 
 <body>
+<?php
+    $server = "localhost";
+    $Username = "root";
+    $Password = "";
+    $database = "Details";
+
+    $connect = mysqli_connect($server, $Username, $Password, $database);
+    session_start();
+    $name = $_SESSION['UserName'];
+    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 2)
+        header('Location: ../../log_in/login.php');
+    else {
+        $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
+        $row1 = mysqli_fetch_array($result1);
+        echo "<script> alert('value of progress is $row1[0]'); </script> ";
+        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = 3 WHERE UserName='$name';");
+        $_SESSION['progress'] = 3;
+        mysqli_commit($connect);
+    }
+
+    ?>
     <h1 id="section-heading">Comments in CSS</h1>
     <div id="main-container">
         <div id="slide4">

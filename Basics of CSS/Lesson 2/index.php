@@ -42,7 +42,7 @@
         $updating = $row1[0];
         else
         $updating = 1;
-        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating[0] WHERE UserName='$name';");
+        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating WHERE UserName='$name';");
         $_SESSION['progress'] = 1;
         mysqli_commit($connect);
     }

@@ -61,7 +61,7 @@
         </div>
     </div>
     <a id="prev" href="../Lesson 3/index.html">Previous</a>
-    <a id="next" href="../../Quizzes/Quiz_1/quiz.html">Next</a>
+    <a id="next" href="../../Quizzes/Quiz_1/quiz.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

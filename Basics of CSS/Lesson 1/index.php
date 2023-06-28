@@ -41,7 +41,7 @@
             </figure>
         </div>
     </div>
-    <a id="next" href="../Lesson 2/index.html">Next</a>
+    <a id="next" href="../Lesson 2/index.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

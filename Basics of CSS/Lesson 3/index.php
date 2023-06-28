@@ -60,8 +60,8 @@
             </div>
         </div>
     </div>
-    <a id="prev" href="../Lesson 2/index.html">Previous</a>
-    <a id="next" href="../Lesson 4/index.html">Next</a>
+    <a id="prev" href="../Lesson 2/index.php">Previous</a>
+    <a id="next" href="../Lesson 4/index.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

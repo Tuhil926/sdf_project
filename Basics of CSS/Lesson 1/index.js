@@ -14,4 +14,8 @@ function createSlide()
     $("#main-container").css("height",x+"px");
     box.css("background-color","#408E91");
 }
+
+
+
 // dark-mode: #2B2A4C
+

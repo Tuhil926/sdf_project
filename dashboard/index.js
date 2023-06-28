@@ -82,3 +82,13 @@ $("#lesson3Button").on("mouseover",function(e){
 $("#lesson3Button").on("mouseout",function(e){
     $("#lesson3Button").animate({opacity:1});
 });
+
+
+// let var1 = document.getElementById('lesson1Button');
+
+// var1.addEventListener('click',function(){
+//     window.location.href = 'http://localhost/sdf_web/sdf_project/Basics%20of%20CSS/Lesson%201';
+
+// });
+
+

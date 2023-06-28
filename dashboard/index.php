@@ -101,8 +101,27 @@
                 <p>Introduction to CSS</p>
                 <button id="lesson1Button" class="btn">
                     <?php 
-                        if ($_SESSION["progress"] == 0){echo "Get Started";} 
-                        else if ($_SESSION["progress"] < 10){echo "Continue";}
+                        if ($_SESSION["progress"] == 0){echo "Get Started";
+                            echo " 
+                            <script>let var1 = document.getElementById('lesson1Button');
+
+                            var1.addEventListener('click',function(){
+                                window.location.href = 'http://localhost/sdf_web/sdf_project/Basics%20of%20CSS/Lesson%201';
+                            
+                            }); </script>";
+                        }
+                        else if ($_SESSION["progress"] < 10){echo "Continue";
+                            echo " 
+                            <script>let var1 = document.getElementById('lesson1Button');
+
+                            var1.addEventListener('click',function(){
+                                window.location.href = 'http://localhost/sdf_web/sdf_project/Basics%20of%20CSS/Lesson%201';
+                            
+                            }); </script>";
+                            
+
+                            
+                        }
                         else {echo "Revise";}
                     ?>
                 </button>

@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="../../Attributes/Favicon/site.webmanifest">
-    <title>Quiz 7</title>
+    <title>Quiz 4</title>
 </head>
 <body>
     <header>
@@ -83,26 +83,11 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>Lots of mistakes</h1>
-                The class name for the top and bottom texts is "test1".<br><br>
-                The class name for the middle div is "test2" <br><br>
-                all the values already present are correct, you'll just have to correct the names of the attributes and add some things<br><br>
-                The height fo the middle div is a multiple of 10<br><br>
-                The values of margin and padding are also multiples of 10<br><br>
-                Note: border-radius is used to give an element curved corners, like the middle div.<br><br>
-                Hint: the middle div is invisible in the output because it's default height is zero<br>
+                <h1>Hidden Question</h1>
+                There is a class by name "test". Change it's font color to #17594A, give it a solid border of 10px with color #213363, display it as block and an appropriate font-size.<br>
+                There is an ID by name "non". Hide it!
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
-test1{
-    fontSize: 30px;
-    textAlign: center;
-    margin: 20px;
-    backgroundColor: #cbba8e;
-}
-#test2{
-    backgroundColor: #8d8060;
-    borderRadius: 40px;
-}
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
             </textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
@@ -114,20 +99,18 @@ test1{
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-                <div class="test1" id="res1">Fixing code is a healthy practice.</div>
-                <div class="test2" id="res2"></div>
-                <div class="test1">Fixing code is a healthy practice.</div>
+                <div class="test">These exercises are easy!</div>
+                <div id="non">Hide me!</div>
             </div>
             <div id="expected">
-                <div class="a">Fixing code is a healthy practice.</div>
-                <div class="b"></div>
-                <div class="a">Fixing code is a healthy practice.</div>
+                <div id="a">These exercises are easy!</div>
+                <div id="b">Hide me!</div>
             </div>
         </div>
         
     </div>
 
-    <div id="next" onclick="next_click()"><a href="../../Advanced CSS/Lesson 1/index.html">Next</a></div>
+    <div id="next" onclick="next_click()"><a href="../Quiz_5/quiz.php">Next</a></div>
 </body>
 <script src="../../prism.js"></script>
 <script src="./index.js"></script>

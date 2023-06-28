@@ -81,3 +81,11 @@ figcaption {
     margin-left:20px;
 
 }
+.alignImg{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.alignImg img{
+    border-radius: 5px;
+}

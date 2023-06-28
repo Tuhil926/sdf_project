@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="../../Attributes/Favicon/site.webmanifest">
-    <title>Quiz 5</title>
+    <title>Quiz 3</title>
 </head>
 <body>
     <header>
@@ -83,21 +83,14 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>Revisitng Box</h1>
-                There is a div class by name "test".
-                Align the text inside the div to the centre and the entire div to the centre of the page . 
-                Additionaly give border to the div. Here are the details :
-                <ul class = "list">
-                    <li> Margin : 50px</li>
-                    <li>Padding : 50px </li>
-                    <li> Text Size: 30px and Align center</li>
-                    <li> BackgroundColor : white  </li>
-                    <li> border thickness ,type and color : 2px , solid and blue</li>
-
-                </ul>
-
+                <h1>In a fix</h1>
+                There is a class by name "test".<br> Fix it. <br> Hint: align text
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ </textarea>
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
+#test{
+    progress: none;
+}
+            </textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>
@@ -111,13 +104,13 @@
                 <div class="test">Fixing code is a healthy practice.</div>
             </div>
             <div id="expected">
-                <div class="text">Fixing code is a healthy practice.</div>
+                <div class="a">Fixing code is a healthy practice.</div>
             </div>
         </div>
         
     </div>
 
-    <div id="next" onclick="next_click()"><a href="../Quiz_6/quiz.html">Next</a></div>
+    <div id="next" onclick="next_click()"><a href="../Quiz_12/quiz.php">Next</a></div>
 </body>
 <script src="../../prism.js"></script>
 <script src="./index.js"></script>

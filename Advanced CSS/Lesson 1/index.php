@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Need of CSS</title>
+    <title>Introduction to Flexbox</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="../../next_btn.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -14,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="apple-touch-icon" sizes="180x180" href="../../Attributes/Favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../Attributes/Favicon/favicon-16x16.png">
@@ -23,29 +22,23 @@
 </head>
 
 <body>
-    <h1 id="section-heading">Alignment And Layout</h1>
+    <h1 id="section-heading">Introduction to Flexbox</h1>
     <div id="main-container">
         <div id="slide1">
-          
-                <ul class ="para">
-                    <li> Height/Width : For any div , the dimensions can be given explicitly or using percentages which makes the div responsive to neighbouring changes . </li>
-                    <br>
-                    <li>text-align : The text can be position left , centre or right using this simple styling .   </li>
-                    <br>
-                    <li> Opacity : Makes the particular div , id transparent ranging fr om 0 to 1 .  </li>
-                </ul>
-                <br>
-     
+            <p class="para">
+                The CSS Flexible Layout Box, popularly known as Flexbox is a powerful layout model. 
+                It helps us to place, align and style the elements inside a container efficiently and makes it responsive. 
+                This eliminates the need of margin and padding for desigining complex web layouts.  
+            </p>
+            <p class="para">To use Flexbox, We need a flex-container and flex-items to put it that container. We can make a container(div) flex-container by setting its display property to flex.</p>
+            <p class="para" id="bottomLine">We will explore more about Flexbox in the coming slides!</p>
             <figure>
-                <img class="bocLogo" src="../../Attributes/Images/layout.png" width="900px" height="278px">
-                <figcaption id="bocLogoCaption">A sample CSS code</figcaption>
+                <img id="flexIntro" src="../../Attributes/Images/flexIntro.png" width="300px">
+                <figcaption>Making an element a flex container</figcaption>
             </figure>
-
-            </div>
-
         </div>
     </div>
-    <a id="next" href="../Lesson 2/index.html">Next</a>
+    <a id="next" href="../Lesson 2/index.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

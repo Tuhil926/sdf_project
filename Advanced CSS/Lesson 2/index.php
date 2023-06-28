@@ -48,8 +48,8 @@
             </figure>
         </div>
     </div>
-    <a id="prev" href="../Lesson 1/index.html">Previous</a>
-    <a id="next" href="../Lesson 3/index.html">Next</a>
+    <a id="prev" href="../Lesson 1/index.php">Previous</a>
+    <a id="next" href="../Lesson 3/index.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

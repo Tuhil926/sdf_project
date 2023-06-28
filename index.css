@@ -68,9 +68,20 @@ header{
     scroll-snap-align: center;
     border-radius: 30px;
     margin: 0 100px;
+    font-size: 30px;
 }
 .demo_img{
     border-radius: 20px;
     margin: 30px;
+    width: 90%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+#first_img{
     width: 70%;
+}
+#some_stuff{
+    padding: 25px;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.26);
+    font-size: 20px;
 }

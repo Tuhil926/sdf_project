@@ -20,43 +20,48 @@
 </head>
 
 <body>
-    <header>
-
+<header>
         <style>
-            .dropdown {
-                position: relative;
+            #dropdown {
                 display: inline-block;
             }
 
             .dropdown-content {
+                left:94%;
+                width:6%;
                 display: none;
                 position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
+                border-radius: 10px;
+                background-color: rgb(255, 151, 54) ;
+                text-align:center;
+                
+                /* min-width: 160px; */
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                z-index: 1;
+                z-index: 10;
+                /* margin-right: 10px; */
             }
 
             .dropdown:hover .dropdown-content {
                 display: block;
             }
+            
         </style>
-        <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
+        <img id="logo" src="../../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
             <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
             <div id="dropdown">
-                <button id="settings-switch" >
+                <button id="settings-switch" onclick="">
                     <span class="material-symbols-outlined">Settings</span></button>
                 <div class="dropdown-content">
-                    <a href="#">Option 1</a>
+                    <a href="../../logout.php">Log Out</a>
+                    <br>
                     <a href="#">Option 2</a>
+                    <br>
                     <a href="#">Option 3</a>
                 </div>
             </div>
 
-            <!-- <label for="cars"></label> 
-            <select name="cars" id="cars">
-                 <option  value="Log Out">Log Out</option>  -->
+            
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {

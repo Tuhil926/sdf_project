@@ -159,7 +159,7 @@
 
     </div>
 
-    <div id="next" onclick="next_click()"><a href="../Quiz_3/quiz.html">Next</a></div>
+    <div id="next" onclick="next_click()"><a href="../Quiz_3/quiz.php">Next</a></div>
 </body>
 <script src="../../prism.js"></script>
 <script src="./index.js"></script>

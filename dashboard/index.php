@@ -111,16 +111,16 @@
                                 window.location.href = '../Basics%20of%20CSS/Lesson%201/';
                             
                             }); </script>";
-                    } else if ($_SESSION["progress"] < 3) {
+                    } else if ($_SESSION["progress"] < 4) {
                         echo "Continue";
                         echo " 
                             <script>let var1 = document.getElementById('lesson1Button');
                             
                             var1.addEventListener('click',function(){
                                
-                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20" . $_SESSION["progress"] . "/';
+                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20" . ($_SESSION["progress"]+1) . "/';
                             }); </script>";
-                    } else if ($_SESSION["progress"] < 6) {
+                    } else if ($_SESSION["progress"] <= 6) {
 
                         echo "Continue";
                         echo " 
@@ -155,7 +155,6 @@
                         $database = "Details";
 
                         $connect = mysqli_connect($server, $Username, $Password, $database);
-                        session_start();
                         $name = $_SESSION['UserName'];
                         if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 6)
                             header('Location: ../../log_in/login.php');
@@ -171,7 +170,7 @@
                             $_SESSION['progress'] = 10;
                             mysqli_commit($connect);
                             echo " 
-                            <script>let var1 = document.getElementById('lesson1Button');
+                            <script> var1 = document.getElementById('lesson2Button');
                                 var1.addEventListener('click',function(){
                                 window.location.href = '../Essentials%20of%20CSS/Lesson%201/';
                            
@@ -180,21 +179,21 @@
                         }
                     } else if ($_SESSION["progress"] < 10) {
                         echo "Locked";
-                    } else if ($_SESSION["progress"] < 13) {
+                    } else if ($_SESSION["progress"] < 14) {
                         echo "Continue";
                         echo " 
-                        <script>let var1 = document.getElementById('lesson2Button');
+                        <script> var1 = document.getElementById('lesson2Button');
                             var1.addEventListener('click',function(){
                             window.location.href = '../Essentials%20of%20CSS/Lesson%20" . ($_SESSION['progress'] - 9) . "/';
                        
                         }); </script>";
-                    } else if ($_SESSION['progress']< 17)
+                    } else if ($_SESSION['progress']<= 17)
                     {
                         echo "Continue";
                         echo " 
-                        <script>let var1 = document.getElementById('lesson2Button');
+                        <script> var1 = document.getElementById('lesson2Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Quizzes/Quiz_" . ($_SESSION['progress'] - 9) . "/quiz.php';
+                            window.location.href = '../Quizzes/Quiz_" . ($_SESSION['progress'] - 13) . "/quiz.php';
                        
                         }); </script>";
                     }
@@ -204,7 +203,7 @@
                     else {
                         echo "Revise";
                         echo " 
-                            <script>let var1 = document.getElementById('lesson2Button');
+                            <script>var1 = document.getElementById('lesson2Button');
                                 var1.addEventListener('click',function(){
                                 window.location.href = '../Essentials%20of%20CSS/Lesson%201/';
                            
@@ -226,7 +225,7 @@
                         $database = "Details";
 
                         $connect = mysqli_connect($server, $Username, $Password, $database);
-                        session_start();
+                        
                         $name = $_SESSION['UserName'];
                         if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 17)
                             header('Location: ../../log_in/login.php');
@@ -242,7 +241,7 @@
                             $_SESSION['progress'] = 20;
                             mysqli_commit($connect);
                             echo " 
-                            <script>let var1 = document.getElementById('lesson3Button');
+                            <script> var1 = document.getElementById('lesson3Button');
                                 var1.addEventListener('click',function(){
                                 window.location.href = '../Advanced%20CSS/Lesson%201/';
                            
@@ -255,7 +254,7 @@
                     } else if ($_SESSION["progress"] < 23) {
                         echo "Continue";
                         echo " 
-                        <script>let var1 = document.getElementById('lesson3Button');
+                        <script>var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
                             window.location.href = '../Advanced%20CSS/Lesson%20".($_SESSION['progress']-20)."/';
                         }); </script>";
@@ -264,7 +263,7 @@
                     {
                         echo "Continue";
                         echo " 
-                        <script>let var1 = document.getElementById('lesson3Button');
+                        <script> var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
                             window.location.href = '../Quizzes/Quiz_".($_SESSION['progress']-22)."/quiz.php';
                         }); </script>";
@@ -273,7 +272,7 @@
                     else {
                         echo "Revise";
                         echo " 
-                        <script>let var1 = document.getElementById('lesson3Button');
+                        <script> var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
                             window.location.href = '../Advanced%20CSS/Lesson%201/';
                        

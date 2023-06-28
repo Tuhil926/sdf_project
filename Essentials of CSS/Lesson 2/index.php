@@ -32,18 +32,18 @@
     $connect = mysqli_connect($server, $Username, $Password, $database);
     session_start();
     $name = $_SESSION['UserName'];
-    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 0)
+    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 10)
         header('Location: ../../log_in/login.php');
     else {
         $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
         $row1 = mysqli_fetch_array($result1);
         // echo "<script> alert('value of progress is $row1[0]'); </script> ";
-        if ($row1[0] > 1)
+        if ($row1[0] > 11)
         $updating = $row1[0];
         else
-        $updating = 1;
+        $updating = 11;
         $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating WHERE UserName='$name';");
-        $_SESSION['progress'] = 1;
+        $_SESSION['progress'] = 11;
         mysqli_commit($connect);
     }
 
@@ -78,8 +78,8 @@
 
         </div>
     </div>
-    <a id="prev" href="../Lesson 1/index.html">Previous</a>
-    <a id="next" href="../Lesson 3/index.html">Next</a>
+    <a id="prev" href="../Lesson 1/index.php">Previous</a>
+    <a id="next" href="../Lesson 3/index.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

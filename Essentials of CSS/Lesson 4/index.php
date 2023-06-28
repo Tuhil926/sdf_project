@@ -23,6 +23,31 @@
 </head>
 
 <body>
+<?php
+    $server = "localhost";
+    $Username = "root";
+    $Password = "";
+    $database = "Details";
+
+    $connect = mysqli_connect($server, $Username, $Password, $database);
+    session_start();
+    $name = $_SESSION['UserName'];
+    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 12)
+        header('Location: ../../log_in/login.php');
+    else {
+        $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
+        $row1 = mysqli_fetch_array($result1);
+        // echo "<script> alert('value of progress is $row1[0]'); </script> ";
+        if ($row1[0] > 13)
+        $updating = $row1[0];
+        else
+        $updating = 13;
+        $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating WHERE UserName='$name';");
+        $_SESSION['progress'] = 13;
+        mysqli_commit($connect);
+    }
+
+    ?>
     <h1 id="section-heading">Alignment And Layout</h1>
     <div id="main-container">
         <div id="slide1">
@@ -45,8 +70,8 @@
 
         </div>
     </div>
-    <a id="prev" href="../Lesson 3/index.html">Previous</a>
-    <a id="next" href="../../Quizzes/Quiz_4/quiz.html">Next</a>
+    <a id="prev" href="../Lesson 3/index.php">Previous</a>
+    <a id="next" href="../../Quizzes/Quiz_4/quiz.php">Next</a>
 </body>
 <script src="./index.js"></script>
 

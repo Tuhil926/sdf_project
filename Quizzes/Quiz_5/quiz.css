@@ -132,12 +132,16 @@ body {
     text-align: center;
     margin: 100px;
 } */
-.a{
-    color:rgb(0,0,0);
-    font-size: 24px;
-    text-align:center;
-    background-color: rgb(255,255,255);
+.text {
+    margin: 250px;
+    border: 2px solid blue;
+    padding: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
 }
+
 .tab-bar {
     height: 25px;
     width: 100%;
@@ -193,4 +197,16 @@ body {
 #next:active {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     background-color: rgb(175, 245, 175);
+}
+
+.list {
+    display: block;
+}
+
+.list li {
+    color: black;
+    list-style: disc;
+    line-height: 25px;
+    font-family: Poppins;
+    font-size: 16px;
 }

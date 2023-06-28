@@ -24,7 +24,7 @@
     <style>
         .error {
             display: block;
-            color: red;
+            /* color: red; */
             font-size: 14px;
             margin-top: 0px;
             margin-bottom: 10px;
@@ -169,7 +169,7 @@
         </div>
 
     </header>
-    <div class="main">
+    <!-- <div class="main"> -->
         <div id="pop">
             <div class="image">
                 <img class="image1" id="image1" src="../Attributes/Images/signup.jpg"></img>
@@ -179,31 +179,37 @@
                 <div id="popup">
                     <h1 class="heading">Sign Up</h1>
                     <form class="form" method="POST">
+                        <div class="inp_field">
                         <label class="x" for name>UserName</label>
                         <br>
                         <input class="y" type="text" id="name" value="<?php echo "$username" ?>" name="UserName">
                         <span class="error"> <?php echo $nameErr; ?></span>
                         <br>
+                        </div>
+                        <div class="inp_field">
                         <label class="x" for name>E-mail Id</label>
                         <br>
                         <input class="y" type="text" id="name" value="<?php echo "$email_id" ?>" name="Email_id"></input>
                         <span class="error"> <?php echo $emailErr; ?></span>
                         <br>
+                        </div>
+                        <div class="inp_field">
                         <label class="x" for name>Password</label>
                         <br>
                         <input class="y" type="password" id="name" value="" name="Password"></input>
                         <span class="error"> <?php echo $passErr; ?></span>
                         <br>
-                        <input class="z" type="checkbox" id="name">I agree to the terms and conditions </input>
-                        <br>
+                        </div>
+                        <!-- <input class="z" type="checkbox" id="name">I agree to the terms and conditions </input>
+                        <br> -->
 
-                        <div class="buttondiv">
+                        <div class="sub_div">
 
                             <input class="pressButton" type="submit" value="Sign Up" name="form1"> </input> <br>
                         </div>
                     </form>
-                    <div class="buttondiv">
-                        <button onclick="show2()" id="pressBelow">Already have an account ? Sign in </p>
+                    <div class="other">
+                        <button onclick="show2()" id="pressBelow">Already have an account ? Sign in
                         </button>
                     </div>
 
@@ -212,25 +218,26 @@
                 <div id="popup1">
                     <h1 class="heading">Sign In</h1>
                     <form class="form" method="POST">
+                        <div class="inp_field">
                         <label class="x" for name>UserName</label>
                         <br>
                         <input class="y" type="text" id="name" value="" name="UserName"></input>
                         <span class="error"> <?php echo "$nameErr"; ?></span>
                         <br>
+                        </div>
+                        <div class="inp_field">
                         <label class="x" for name>Password</label>
                         <br>
                         <input class="y" type="password" id="name" value="" name="Password"></input>
                         <span class="error"> <?php echo "$passErr"; ?></span>
                         <br>
-
-
-
-                        <div class="buttondiv">
-                            <input class="pressButton" type="submit" value="Sign In" name="form2"> </input> <br>
+                        </div>
+                        <div class="sub_div">
+                        <input class="pressButton" type="submit" value="Sign In" name="form2"> </input>
                         </div>
                     </form>
-                    <div class="buttondiv">
-                        <button onclick="show1()" id="pressBelow">New User ? Sign Up </p>
+                    <div class="other">
+                        <button onclick="show1()" id="pressBelow">New User ? Sign Up
                         </button>
                     </div>
 
@@ -246,7 +253,7 @@
 
 
 
-    </div>
+    <!-- </div> -->
     <script src="login.js"></script>
     <footer id="footer">
 

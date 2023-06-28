@@ -133,7 +133,7 @@ body {
     margin: 100px;
 } */
 .text {
-    margin: 250px;
+    margin: 50px;
     border: 2px solid blue;
     padding: 50px;
     color: rgb(0, 0, 0);
@@ -209,4 +209,7 @@ body {
     line-height: 25px;
     font-family: Poppins;
     font-size: 16px;
+}
+a{
+    text-decoration: none;
 }

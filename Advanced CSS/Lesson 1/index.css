@@ -62,3 +62,8 @@ figure>img{
 figcaption{
     text-align:center;
 }
+#bottomLine{
+    text-align:center;
+    font-size:24px;
+    width:45%;
+}

@@ -40,12 +40,15 @@ function update(text) {
   show_output();
   
   function validate_ans(){
-      let a = window.getComputedStyle(document.getElementById("a"))
+      let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
       console.log(a);
-      if (a.color=="rgb(255, 33, 113)" && a.fontSize=="64px"){
+      if (a.fontSize == "30px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)" &&
+            a.borderLeft =="2px solid rgb(0, 0, 255)" && a.borderRight =="2px solid rgb(0, 0, 255)" &&  a.borderTop =="2px solid rgb(0, 0, 255)" &&  a.borderBottom =="2px solid rgb(0, 0, 255)" 
+           &&  a.paddingLeft=="50px" &&   a.paddingRight=="50px" &&  a.paddingTop=="50px" &&  a.paddingBottom=="50px" && 
+           a.marginTop == "50px" &&   a.marginBottom == "50px" &&   a.marginLeft == "50px" &&   a.marginRight == "50px") {
           return true;
       }else{
-          console.log(window.getComputedStyle(document.getElementById("a")));
+          // console.log(window.getComputedStyle(document.getElementById("a")));
           return false;
       }
   }
@@ -59,5 +62,7 @@ function update(text) {
   }
   
   function next_click(){
-      alert("Congrats! You finished Quiz 1!")
+      alert("Congrats! You finished Quiz 5!")
   }
+  update(document.getElementById("editor").value);
+  applyUserCSS();

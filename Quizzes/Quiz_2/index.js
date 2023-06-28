@@ -60,5 +60,5 @@ function try_show_newx_button() {
 }
 
 function next_click() {
-    alert("Congrats! You finished the quiz!")
+    alert("Congrats! You finished Quiz 2!")
 }

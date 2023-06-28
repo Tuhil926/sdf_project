@@ -46,7 +46,7 @@
             }
             
         </style>
-        <img id="logo" src="../../Attributes/Images/logo.png" alt="logo">
+        <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
             <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
             <div id="dropdown">
@@ -122,7 +122,15 @@
 
                             
                         }
-                        else {echo "Revise";}
+                        else {echo "Revise";
+                            echo " 
+                            <script>let var1 = document.getElementById('lesson1Button');
+
+                            var1.addEventListener('click',function(){
+                                window.location.href = 'http://localhost/sdf_web/sdf_project/Basics%20of%20CSS/Lesson%201';
+                            
+                            }); </script>";
+                        }
                     ?>
                 </button>
             </div>

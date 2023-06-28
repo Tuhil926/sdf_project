@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="../../Attributes/Favicon/site.webmanifest">
-    <title>Quiz 3</title>
+    <title>Quiz 11</title>
 </head>
 <body>
     <header>
@@ -83,12 +83,18 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>In a fix</h1>
-                There is a class by name "test".<br> Fix it. <br> Hint: align text
+                <h1>End to End</h1>
+                There is a container with class name "test". It has 2 paragraph elements("End","End").
+                <ul class="endList">
+                    <li>Make it a flex-container with height 200px</li>
+                    <li>Change to background color to #155263</li>
+                    <li>Change color of text to #FF6F3C and font size to 20px</li>
+                    <li>Make necesary styling according expected output</li>
+                </ul>
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
-#test{
-    progress: none;
+.test{
+    font-size:6px;
 }
             </textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
@@ -101,10 +107,16 @@
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-                <div class="test">Fixing code is a healthy practice.</div>
+                <div class="test">
+                    <p>End</p>
+                    <p>End</p>
+                </div>
             </div>
             <div id="expected">
-                <div class="a">Fixing code is a healthy practice.</div>
+                <div class="a">
+                    <p>End</p>
+                    <p>End</p>
+                </div>
             </div>
         </div>
         

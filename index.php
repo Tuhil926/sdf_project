@@ -33,34 +33,33 @@
         <button class="slideshow_btn" onclick="doLeft();reset_btn();">&lt;</button>
         <div class="container">
             <div class="page_desc">
-                Simple interactive excercises to get you started
+                Learn css easily
                 <br>
-                <img src="Attributes/Images/demo_1.png" alt="demo1" class="demo_img">
+                <img src="Attributes/Images/bocLogo.jpg" alt="demo1" class="demo_img" id="first_img">
             </div>
             <div class="page_desc">
-                Learn more by trying things out
+                Slide based learning
                 <br>
-                <img src="Attributes/Images/demo_1.png" alt="demo1" class="demo_img">
-            </div>
-            <div class="page_desc">
-                Quizzes at the end of each chapter to practice your skills
-                <br>
-                <img src="Attributes/Images/demo_1.png" alt="demo1" class="demo_img">
+                <img src="Attributes/Images/slideDemo.png" alt="demo1" class="demo_img">
             </div>
             <div class="page_desc">
                 Quizzes at the end of each chapter to practice your skills
                 <br>
-                <img src="Attributes/Images/demo_1.png" alt="demo1" class="demo_img">
+                <img src="Attributes/Images/editorDemo.png" alt="demo1" class="demo_img">
             </div>
         </div>
         <button class="slideshow_btn" onclick="doRight();reset_btn();">&gt;</button>
+    </div>
+    <div id="some_stuff">
+        <h1> About us</h1>
+        This is a group project by Aditya, Hemanth and Tuhil, made for the Software development fundamentals course in IIT Hyderabad.
     </div>
     <script>
         // import{show1,show2} from "log_in/login.js";
 
         var scroll_amount = 1000;
         var img_no = 0;
-        var no_of_imgs = 4;
+        var no_of_imgs = 3;
         var button_clicked = false;
         function doRight(){
             img_no += 1;

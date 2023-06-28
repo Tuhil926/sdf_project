@@ -118,7 +118,7 @@
                             
                             var1.addEventListener('click',function(){
                                
-                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20" . $_SESSION["progress"] . "./';
+                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20" . $_SESSION["progress"] . "/';
                             }); </script>";
                     } else if ($_SESSION["progress"] < 6) {
 
@@ -127,7 +127,7 @@
                             <script>let var1 = document.getElementById('lesson1Button');
                             
                             var1.addEventListener('click',function(){
-                                window.location.href = ' ../Quizes/Quiz_" . ($_SESSION["progress"] - 2) . "./';
+                                window.location.href = ' ../Quizzes/Quiz_" .($_SESSION["progress"] - 3) . "/quiz.php';
                             }); </script>";
                     } else {
                         echo "Revise";
@@ -180,15 +180,28 @@
                         }
                     } else if ($_SESSION["progress"] < 10) {
                         echo "Locked";
-                    } else if ($_SESSION["progress"] < 20) {
+                    } else if ($_SESSION["progress"] < 13) {
                         echo "Continue";
                         echo " 
                         <script>let var1 = document.getElementById('lesson2Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Essentials%20of%20CSS/Lesson%20" . ($_SESSION['PROGRESS'] - 9) . "/';
+                            window.location.href = '../Essentials%20of%20CSS/Lesson%20" . ($_SESSION['progress'] - 9) . "/';
                        
                         }); </script>";
-                    } else {
+                    } else if ($_SESSION['progress']< 17)
+                    {
+                        echo "Continue";
+                        echo " 
+                        <script>let var1 = document.getElementById('lesson2Button');
+                            var1.addEventListener('click',function(){
+                            window.location.href = '../Quizzes/Quiz_" . ($_SESSION['progress'] - 9) . "/quiz.php';
+                       
+                        }); </script>";
+                    }
+                    
+                    
+                    
+                    else {
                         echo "Revise";
                         echo " 
                             <script>let var1 = document.getElementById('lesson2Button');
@@ -215,7 +228,7 @@
                         $connect = mysqli_connect($server, $Username, $Password, $database);
                         session_start();
                         $name = $_SESSION['UserName'];
-                        if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 6)
+                        if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 17)
                             header('Location: ../../log_in/login.php');
                         else {
                             $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
@@ -239,15 +252,25 @@
 
                     } else if ($_SESSION["progress"] < 20) {
                         echo "Locked";
-                    } else if ($_SESSION["progress"] < 30) {
+                    } else if ($_SESSION["progress"] < 23) {
                         echo "Continue";
                         echo " 
                         <script>let var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Advanced%20CSS/Lesson%20".($_SESSION['poregress-19'])."/';
+                            window.location.href = '../Advanced%20CSS/Lesson%20".($_SESSION['progress']-20)."/';
                         }); </script>";
 
-                    } else {
+                    } else if ($_SESSION['progress'] < 28)
+                    {
+                        echo "Continue";
+                        echo " 
+                        <script>let var1 = document.getElementById('lesson3Button');
+                            var1.addEventListener('click',function(){
+                            window.location.href = '../Quizzes/Quiz_".($_SESSION['progress']-22)."/quiz.php';
+                        }); </script>";
+                    }
+                       
+                    else {
                         echo "Revise";
                         echo " 
                         <script>let var1 = document.getElementById('lesson3Button');

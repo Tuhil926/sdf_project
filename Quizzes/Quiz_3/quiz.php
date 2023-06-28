@@ -135,7 +135,7 @@
         
     </div>
 
-    <div id="next" onclick="next_click()"><a href="../../dashboard/index.php">Next</a></div>
+    <div id="next" ><a href="../../Essentials%20of%20CSS/Lesson%201/index.php">Next</a></div>
 </body>
 <script src="../../prism.js"></script>
 <script src="./index.js"></script>

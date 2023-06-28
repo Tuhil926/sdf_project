@@ -45,7 +45,7 @@ function update(text) {
       if (a.fontSize == "24px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)"){
           return true;
       }else{
-          console.log(window.getComputedStyle(document.getElementById("a")));
+          // console.log(window.getComputedStyle(document.getElementById("a")));
           return false;
       }
   }
@@ -58,8 +58,8 @@ function update(text) {
       }
   }
   
-  function next_click(){
-      alert("Congrats! You finished Introduction to CSS !")
-  }
+  // function next_click(){
+  //     alert("Congrats! You finished Introduction to CSS !")
+  // }
   update(document.getElementById("editor").value);
   applyUserCSS();

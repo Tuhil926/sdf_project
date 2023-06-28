@@ -20,7 +20,6 @@
 </head>
 
 <body>
-    session.start();
     <header>
         <style>
             #dropdown {
@@ -146,7 +145,7 @@
                 <p>Essentials of CSS</p>
                 <button id="lesson2Button" class="btn">
                     <?php
-                    if ($_SESSION["progress"] == 6) {
+                    if ($_SESSION["progress"] == 10) {
                         echo "Get Started";
 
                         $server = "localhost";
@@ -156,7 +155,7 @@
 
                         $connect = mysqli_connect($server, $Username, $Password, $database);
                         $name = $_SESSION['UserName'];
-                        if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 6)
+                        if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 10)
                             header('Location: ../../log_in/login.php');
                         else {
                             $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");

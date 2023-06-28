@@ -101,7 +101,9 @@
                 <p>Introduction to CSS</p>
                 <button id="lesson1Button" class="btn">
                     <?php 
-                        if ($_SESSION["progress"] == 0){echo "Get Started";} 
+                        if ($_SESSION["progress"] == 0){echo "Get Started";
+                           
+                        }  
                         else if ($_SESSION["progress"] < 10){echo "Continue";}
                         else {echo "Revise";}
                     ?>

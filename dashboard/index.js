@@ -82,3 +82,10 @@ $("#lesson3Button").on("mouseover",function(e){
 $("#lesson3Button").on("mouseout",function(e){
     $("#lesson3Button").animate({opacity:1});
 });
+
+var var1 = document.getElementById("lesson1Button");
+
+var1.addEventListener('click',function(){
+    window.location.href = 'https://www.google.com';
+
+});

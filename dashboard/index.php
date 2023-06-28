@@ -100,7 +100,7 @@
             <div id="lesson1" class="lesson">
                 <p>Introduction to CSS</p>
                 <button id="lesson1Button" class="btn">
-                   
+
                     <?php
                     if ($_SESSION["progress"] == 0) {
                         echo "Get Started";
@@ -117,16 +117,15 @@
                             <script>let var1 = document.getElementById('lesson1Button');
 
                             var1.addEventListener('click',function(){
-                                window.location.href = '../Basics%20of%20CSS/Lesson%201/';
-                            
+                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20" . $_SESSION["progress"] . "./';
                             }); </script>";
                     } else {
                         echo "Revise";
                         echo " 
                             <script>let var1 = document.getElementById('lesson1Button');
-
-                            var1.addEventListener('click',function(){
-                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20".$_SESSION["progress"]."./';
+                                var1.addEventListener('click',function(){
+                                window.location.href = '../Basics%20of%20CSS/Lesson%201/';
+                           
                             
                             }); </script>";
                     }

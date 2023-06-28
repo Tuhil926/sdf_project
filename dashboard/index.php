@@ -20,21 +20,22 @@
 </head>
 
 <body>
-<header>
+    session.start();
+    <header>
         <style>
             #dropdown {
                 display: inline-block;
             }
 
             .dropdown-content {
-                left:94%;
-                width:6%;
+                left: 94%;
+                width: 6%;
                 display: none;
                 position: absolute;
                 border-radius: 10px;
-                background-color: rgb(255, 151, 54) ;
-                text-align:center;
-                
+                background-color: rgb(255, 151, 54);
+                text-align: center;
+
                 /* min-width: 160px; */
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                 z-index: 10;
@@ -44,7 +45,6 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-            
         </style>
         <img id="logo" src="../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            
+
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -85,7 +85,7 @@
             <h1 id="welcome">Welcome back,
                 <?php
                 session_start();
-                if (!isset($_SESSION["progress"])){
+                if (!isset($_SESSION["progress"])) {
                     header('Location: ../log_in/login.php');
                     exit();
                 }
@@ -100,59 +100,68 @@
             <div id="lesson1" class="lesson">
                 <p>Introduction to CSS</p>
                 <button id="lesson1Button" class="btn">
-                    <?php 
-                        if ($_SESSION["progress"] == 0){echo "Get Started";
-                            echo " 
+                   
+                    <?php
+                    if ($_SESSION["progress"] == 0) {
+                        echo "Get Started";
+                        echo " 
                             <script>let var1 = document.getElementById('lesson1Button');
 
                             var1.addEventListener('click',function(){
                                 window.location.href = '../Basics%20of%20CSS/Lesson%201/';
                             
                             }); </script>";
-                        }
-                        else if ($_SESSION["progress"] < 10){echo "Continue";
-                            echo " 
+                    } else if ($_SESSION["progress"] < 10) {
+                        echo "Continue";
+                        echo " 
                             <script>let var1 = document.getElementById('lesson1Button');
 
                             var1.addEventListener('click',function(){
                                 window.location.href = '../Basics%20of%20CSS/Lesson%201/';
                             
                             }); </script>";
-                            
-
-                            
-                        }
-                        else {echo "Revise";
-                            echo " 
+                    } else {
+                        echo "Revise";
+                        echo " 
                             <script>let var1 = document.getElementById('lesson1Button');
 
                             var1.addEventListener('click',function(){
-                                window.location.href = '../Basics%20of%20CSS/Lesson%201/';
+                                window.location.href = ' ../Basics%20of%20CSS/Lesson%20".$_SESSION["progress"]."./';
                             
                             }); </script>";
-                        }
+                    }
                     ?>
                 </button>
             </div>
             <div id="lesson2" class="lesson">
                 <p>Essentials of CSS</p>
                 <button id="lesson2Button" class="btn">
-                    <?php 
-                        if ($_SESSION["progress"] == 10){echo "Get Started";} 
-                        else if ($_SESSION["progress"] < 10){echo "Locked";}
-                        else if ($_SESSION["progress"] < 20){echo "Continue";}
-                        else {echo "Revise";}
+                    <?php
+                    if ($_SESSION["progress"] == 10) {
+                        echo "Get Started";
+                    } else if ($_SESSION["progress"] < 10) {
+                        echo "Locked";
+                    } else if ($_SESSION["progress"] < 20) {
+                        echo "Continue";
+                    } else {
+                        echo "Revise";
+                    }
                     ?>
                 </button>
             </div>
             <div id="lesson3" class="lesson">
                 <p>Advanced CSS</p>
                 <button id="lesson3Button" class="btn">
-                    <?php 
-                        if ($_SESSION["progress"] == 20){echo "Get Started";} 
-                        else if ($_SESSION["progress"] < 20){echo "Locked";}
-                        else if ($_SESSION["progress"] < 30){echo "Continue";}
-                        else {echo "Revise";}
+                    <?php
+                    if ($_SESSION["progress"] == 20) {
+                        echo "Get Started";
+                    } else if ($_SESSION["progress"] < 20) {
+                        echo "Locked";
+                    } else if ($_SESSION["progress"] < 30) {
+                        echo "Continue";
+                    } else {
+                        echo "Revise";
+                    }
                     ?>
                 </button>
             </div>

@@ -42,7 +42,7 @@ function update(text) {
   function validate_ans(){
       let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
       console.log(a);
-      if (a.fontSize == "24px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)"){
+      if (a.display=="flex"&&a.height=="400px"&&a.backgroundColor=="rgb(49, 29, 63)"&&a.color=="rgb(226, 62, 87)"&&a.fontSize=="16px"&&a.flexDirection=="column"&&a.justifyContent=="flex-end"){
           return true;
       }else{
           console.log(window.getComputedStyle(document.getElementById("a")));
@@ -59,7 +59,7 @@ function update(text) {
   }
   
   function next_click(){
-      alert("Congrats! You finished Introduction to CSS !")
+      alert("Congrats! You finished Quiz 9!")
   }
   update(document.getElementById("editor").value);
   applyUserCSS();

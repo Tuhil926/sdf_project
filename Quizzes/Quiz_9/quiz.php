@@ -83,8 +83,17 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>In a fix</h1>
-                There is a class by name "test".<br> Fix it. <br> Hint: align text
+                <h1>Tricky End</h1>
+                <h4>There is a container with class name "test". It contains several paragraph elements.</h4>
+                <ul class="trickList">
+                    <li>Make "test" a flex container with a height of 400px</li>
+                    <li>Change background color to #311D3F</li>
+                    <li>Change background color to #E23E57</li>
+                    <li>Make the font size to 16px</li>
+                    <li>Do the other styling according to expected output</li>
+                    <li>Think about for a while. Revisit the slides if needed</li>
+                </ul>
+                <pre> </pre>
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
 #test{
@@ -101,10 +110,22 @@
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-                <div class="test">Fixing code is a healthy practice.</div>
+                <div class="test">
+                    <p>This</p>
+                    <p>is</p>
+                    <p>a</p>
+                    <p>tricky</p>
+                    <p>exercise.</p>
+                </div>
             </div>
             <div id="expected">
-                <div class="a">Fixing code is a healthy practice.</div>
+                <div class="a">
+                    <p>This</p>
+                    <p>is</p>
+                    <p>a</p>
+                    <p>tricky</p>
+                    <p>exercise.</p>
+                </div>
             </div>
         </div>
         

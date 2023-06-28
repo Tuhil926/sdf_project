@@ -53,7 +53,7 @@
                 <button id="settings-switch" onclick="">
                     <span class="material-symbols-outlined">Settings</span></button>
                 <div class="dropdown-content">
-                    <a href="../../logout.php">Log Out</a>
+                    <a href="../logout.php">Log Out</a>
                     <br>
                     <a href="#">Option 2</a>
                     <br>

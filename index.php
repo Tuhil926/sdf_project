@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../Attributes/Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../Attributes/Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../Attributes/Favicon/favicon-16x16.png">
-    <link rel="manifest" href="../Attributes/Favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Attributes/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Attributes/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Attributes/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./Attributes/Favicon/site.webmanifest">
     <title>Home page</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
     
     <!-- <h2>Welcome to [project name]! Tired of not being able to get CSS to work? Learn CSS now!</h2> -->
     <div class="slideshow">
-        <button class="slideshow_btn" onclick="doLeft()">&lt;</button>
+        <button class="slideshow_btn" onclick="doLeft();reset_btn();">&lt;</button>
         <div class="container">
             <div class="page_desc">
                 Simple interactive excercises to get you started
@@ -47,15 +47,21 @@
                 <br>
                 <img src="Attributes/Images/demo_1.png" alt="demo1" class="demo_img">
             </div>
+            <div class="page_desc">
+                Quizzes at the end of each chapter to practice your skills
+                <br>
+                <img src="Attributes/Images/demo_1.png" alt="demo1" class="demo_img">
+            </div>
         </div>
-        <button class="slideshow_btn" onclick="doRight()">&gt;</button>
+        <button class="slideshow_btn" onclick="doRight();reset_btn();">&gt;</button>
     </div>
     <script>
         // import{show1,show2} from "log_in/login.js";
 
         var scroll_amount = 1000;
         var img_no = 0;
-        var no_of_imgs = 3;
+        var no_of_imgs = 4;
+        var button_clicked = false;
         function doRight(){
             img_no += 1;
             if (img_no >= no_of_imgs){
@@ -75,8 +81,17 @@
             }
         }
         function recursive_repeat(){
-            doRight();
-            setTimeout(recursive_repeat, 3000);
+            if (!button_clicked){
+                doRight();
+                setTimeout(recursive_repeat, 3000);
+            }
+        }
+        function reset_btn(){
+            button_clicked =true;
+            setTimeout(() => {
+                button_clicked =false;
+                setTimeout(recursive_repeat, 3000);
+            }, 10000);
         }
         setTimeout(recursive_repeat, 3000);
     </script>

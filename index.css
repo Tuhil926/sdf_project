@@ -22,22 +22,23 @@ header{
 }
 .slideshow{
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    justify-content: space-evenly;
+    margin-top: 25px;
     align-items: center;
     position :relative;
+    
 }
 .container{
     display: flex;
-    width: 900px;
+    width: 80%;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     overflow-x:hidden;
 }
 .slideshow_btn{
     background-color: rgba(0, 0, 0, 0);
-    margin: 50px ;
-    width: 60px;
+    margin: 10px;
+    width: 40px;
     height: 120px;
     font-size: 50px;
     opacity: 30%;
@@ -63,7 +64,7 @@ header{
     background-color: #FF6E31;
     color: rgb(0, 0, 0);
     padding: 20px;
-    width: 700px;
+    width: calc(100% - 40px);
     scroll-snap-align: center;
     border-radius: 30px;
     margin: 0 100px;
@@ -71,5 +72,5 @@ header{
 .demo_img{
     border-radius: 20px;
     margin: 30px;
-    width: 500px;
+    width: 70%;
 }

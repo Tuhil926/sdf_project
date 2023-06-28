@@ -133,10 +133,14 @@ body {
     margin: 100px;
 } */
 .a{
-    color:rgb(0,0,0);
-    font-size: 24px;
-    text-align:center;
-    background-color: rgb(255,255,255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #B83B5E;
+    color: #F08A5D;
+    font-size: 15px;
+    height: 400px;
 }
 .tab-bar {
     height: 25px;
@@ -197,4 +201,13 @@ body {
 a{
     text-decoration: none;
     color:black;
+}
+.taskList{
+    display:block;
+}
+.taskList li{
+    font-size: 16px;
+    font-family: Poppins;
+    color:black;
+    list-style-type: square;
 }

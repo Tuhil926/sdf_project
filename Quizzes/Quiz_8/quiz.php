@@ -83,12 +83,21 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>In a fix</h1>
-                There is a class by name "test".<br> Fix it. <br> Hint: align text
+                <h1>Justify Code</h1>
+                <h4>There is a container with class by name "test". It contains 5 paragraph elements without any class/id selectors.</h4>
+                <ul class="taskList">
+                    <li>Make the container a flex-container with a height of 400px</li>
+                    <li>Change it's background color to #B83B5E</li>
+                    <li>Get the paragraph elements into the middle of page</li>
+                    <li>Change their color to #F08A5D</li>
+                    <li>Make their font-size to 15px</li>
+                    <li>Align those paragraph elements into a column</li>
+                </ul>
+                <pre> </pre>
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
-#test{
-    progress: none;
+.test{
+    display:none;
 }
             </textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
@@ -101,10 +110,22 @@
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-                <div class="test">Fixing code is a healthy practice.</div>
+                <div class="test">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
+                    <p>Item 4</p>
+                    <p>Item 5</p>
+                </div>
             </div>
             <div id="expected">
-                <div class="a">Fixing code is a healthy practice.</div>
+                <div class="a">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
+                    <p>Item 4</p>
+                    <p>Item 5</p>
+                </div>
             </div>
         </div>
         

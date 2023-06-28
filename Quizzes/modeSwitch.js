@@ -74,3 +74,4 @@ function show_expected() {
     output.zIndex = 1;
     expected.zIndex = 2;
 }
+show_output();

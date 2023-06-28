@@ -133,10 +133,14 @@ body {
     margin: 100px;
 } */
 .a{
-    color:rgb(0,0,0);
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #BFA2DB;
+    color: #FFD369;
+    height:200px;
     font-size: 24px;
-    text-align:center;
-    background-color: rgb(255,255,255);
 }
 .tab-bar {
     height: 25px;
@@ -197,4 +201,13 @@ body {
 a{
     text-decoration: none;
     color:black;
+}
+.earthList{
+    display:block;
+}
+.earthList li{
+    font-size: 16px;
+    font-family: Poppins;
+    color:black;
+    list-style-type: square;
 }

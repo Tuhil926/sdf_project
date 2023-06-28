@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="../../Attributes/Favicon/site.webmanifest">
-    <title>Quiz 3</title>
+    <title>Quiz 10</title>
 </head>
 <body>
     <header>
@@ -83,12 +83,18 @@
     <div class="quiz">
         <div class="left_panel">
             <div class="question">
-                <h1>In a fix</h1>
-                There is a class by name "test".<br> Fix it. <br> Hint: align text
+                <h1>Down to Earth</h1>
+                There is a container by class name "test". It contains 3 paragraph elements("Earth","To","Down").
+                <ul class="earthList">
+                    <li>Make it a flex-container with height 200px</li>
+                    <li>Change Background color to #BFA2DB</li>
+                    <li>Change font color to #FFD369 and a size of 24px</li>
+                    <li>Make necessary styling according to expected output</li>
+                </ul>
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
-#test{
-    progress: none;
+test{
+    border: 10px solid palegoldenrod;
 }
             </textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
@@ -101,10 +107,18 @@
                 <div class="tab" id="expected-tab" onclick="show_expected()">Expected</div>
             </div>
             <div class="output" id="output">
-                <div class="test">Fixing code is a healthy practice.</div>
+                <div class="test">
+                    <p>Earth</p>
+                    <p>To </p>
+                    <p>Down</p>
+                </div>
             </div>
             <div id="expected">
-                <div class="a">Fixing code is a healthy practice.</div>
+                <div class="a">
+                    <p>Earth</p>
+                    <p>To </p>
+                    <p>Down</p>
+                </div>
             </div>
         </div>
         

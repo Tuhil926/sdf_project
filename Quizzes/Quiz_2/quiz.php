@@ -83,7 +83,7 @@
                 <div class="dropdown-content">
                     <a href="../../logout.php">Log Out</a>
                     <br>
-                    <a href="#">Option 2</a>
+                    <a href="../../dashboard/index.php">DashBoard</a>
                     <br>
                     <a href="#">Option 3</a>
                 </div>

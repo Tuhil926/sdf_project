@@ -80,7 +80,7 @@
                 <div class="dropdown-content">
                     <a href="../../logout.php">Log Out</a>
                     <br>
-                    <a href="#">Option 2</a>
+                    <a href="../../dashboard/index.php">DashBoard</a>
                     <br>
                     <a href="#">Option 3</a>
                 </div>
@@ -110,7 +110,7 @@
             <div class="question">
                 <h1>Final Exam</h1>
                You will be tested on all the topics covered in this course . 
-               
+
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
 #test{

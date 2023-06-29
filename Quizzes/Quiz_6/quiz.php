@@ -52,7 +52,17 @@
         <img id="logo" src="../../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
             <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
-            <button id="settings-switch"><span class="material-symbols-outlined">settings</span></button>
+            <div id="dropdown">
+                <button id="settings-switch" onclick="">
+                    <span class="material-symbols-outlined">Settings</span></button>
+                <div class="dropdown-content">
+                    <a href="../../logout.php">Log Out</a>
+                    <br>
+                    <a href="../../dashboard/index.php">DashBoard</a>
+                    <br>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
         </div>
     </header>
     <div class="quiz">

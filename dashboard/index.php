@@ -192,7 +192,7 @@
                         echo " 
                         <script> var1 = document.getElementById('lesson2Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Quizzes/Quiz_" . ($_SESSION['progress'] - 13) . "/quiz.php';
+                            window.location.href = '../Quizzes/Quiz_" . ($_SESSION['progress'] - 13 +3) . "/quiz.php';
                        
                         }); </script>";
                     }
@@ -250,12 +250,12 @@
 
                     } else if ($_SESSION["progress"] < 20) {
                         echo "Locked";
-                    } else if ($_SESSION["progress"] < 23) {
+                    } else if ($_SESSION["progress"] < 24) {
                         echo "Continue";
                         echo " 
                         <script>var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Advanced%20CSS/Lesson%20".($_SESSION['progress']-20)."/';
+                            window.location.href = '../Advanced%20CSS/Lesson%20".($_SESSION['progress']-19)."/';
                         }); </script>";
 
                     } else if ($_SESSION['progress'] < 28)
@@ -264,7 +264,7 @@
                         echo " 
                         <script> var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Quizzes/Quiz_".($_SESSION['progress']-22)."/quiz.php';
+                            window.location.href = '../Quizzes/Quiz_".($_SESSION['progress']-22+7)."/quiz.php';
                         }); </script>";
                     }
                        

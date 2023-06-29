@@ -40,7 +40,7 @@
         else
         $updating = 4;
         $result2 = mysqli_query($connect, "UPDATE sign_in SET Progress = $updating WHERE UserName='$name';");
-        $_SESSION['progress'] = 4;
+        $_SESSION['progress'] = $updating;
         mysqli_commit($connect);
     }
 

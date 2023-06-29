@@ -1,0 +1,112 @@
+Quiz_1 [AC Class] :
+    .test{
+        font-size:64px;
+        color: #FF2171
+    }
+
+Quiz_2 [Modify The Paragraph!] :
+    h1{
+        font-size:30px;
+        color: rgb(255,0,0);
+        text-decoration:underline;
+    }
+    p{
+        font-size:20px;
+        color:rgb(67,37,250);
+    }
+
+Quiz_3 [In a fix] :
+    .test{
+        text-align:center;
+        background-color:white;
+        font-size:24px;
+    }
+
+Quiz_4 [Hidden Question] :
+    .test{
+        color: #17594A;
+        border: 10px solid #213363;
+        font-size:24px;
+        display:block;
+    }
+    #non{
+        display:none;
+    }
+
+Quiz_5 [Revisiting Box] :
+    .test{
+        text-align:center;
+        margin:50px;
+        padding: 50px;
+        font-size:30px;
+        background-color: white;
+        border: 2px solid blue;
+    }
+
+Quiz_6 [Margin Align Size] :
+    div{
+        text-align:center;
+        font-size:20px;
+        margin:100px;
+    }
+
+Quiz_7 [Lots of mistakes] :
+    .test1{
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+        background-color: #cbba8e;
+        padding: 20px;
+        opacity: 0.5;
+    }
+    .test2{
+        background-color: #8d8060;
+        border-radius: 40px;
+        height: 200px;
+    }
+
+Quiz_8 [Justify Code] :
+    .test{
+        display: flex;
+        height: 400px;
+        background-color: #B83B5E;
+        color: #F08A5D;
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+Quiz_9 [Tricky End] :
+    .test{
+        display: flex;
+        height: 400px;
+        background-color: #311D3F;
+        color: #E23E57;
+        font-size: 16px;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+Quiz_10 [Down to Earth] :
+    .test{
+        display: flex;
+        height: 200px;
+        background-color: #BFA2DB;
+        color: #FFD369;
+        font-size: 24px;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+Quiz_11 [End to End] :
+    .test{
+        display: flex;
+        height: 200px;
+        background-color: #155263;
+        color: #FF6F3C;
+        font-size: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }

@@ -216,7 +216,7 @@
                 <p>Advanced CSS</p>
                 <button id="lesson3Button" class="btn">
                     <?php
-                    if ($_SESSION["progress"] == 17) {
+                    if ($_SESSION["progress"] == 20) {
                         echo "Get Started";
                         $server = "localhost";
                         $Username = "root";

@@ -264,7 +264,7 @@
                         echo " 
                         <script> var1 = document.getElementById('lesson3Button');
                             var1.addEventListener('click',function(){
-                            window.location.href = '../Quizzes/Quiz_".($_SESSION['progress']-22+7)."/quiz.php';
+                            window.location.href = '../Quizzes/Quiz_".($_SESSION['progress']-22+6)."/quiz.php';
                         }); </script>";
                     }
                        

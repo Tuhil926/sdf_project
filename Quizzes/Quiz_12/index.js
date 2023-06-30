@@ -40,12 +40,14 @@ function update(text) {
   show_output();
   
   function validate_ans(){
-      let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
+      let a = window.getComputedStyle(document.getElementsByClassName("test1")[0]);
+      let b = window.getComputedStyle(document.getElementsByClassName("test2")[0]);
       console.log(a);
-      if (a.fontSize == "24px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)" || document.getElementById("editor").value == "please"){
+      console.log(b);
+      if (a.height=="200px"&&a.backgroundColor=="rgb(101, 39, 190)"&&a.color=="rgb(255, 102, 102)"&&a.fontSize=="24px"&&a.textDecorationLine=="line-through"&&b.display=="flex"&&b.flexDirection=="row"&&b.alignItems=="center"&&b.justifyContent=="space-evenly"&&b.height=="200px"&&b.fontSize=="24px"&&b.backgroundColor=="rgb(153, 0, 0)"&&b.color=="rgb(212, 217, 37)"&&b.marginTop=="40px"&&b.marginBottom=="40px"&&b.marginLeft=="40px"&&b.marginRight=="40px"&&b.opacity=="0.76"&&b.border=="10px dotted rgb(78, 108, 80)"&&b.borderRadius=="10px"){
           return true;
       }else{
-          console.log(window.getComputedStyle(document.getElementById("a")));
+          // console.log(window.getComputedStyle(document.getElementById("a")));
           return false;
       }
   }
@@ -59,7 +61,7 @@ function update(text) {
   }
   
   function next_click(){
-      alert("Congrats! You finished Introduction to CSS !")
+      alert("Congrats! You completed the course!")
   }
   update(document.getElementById("editor").value);
   applyUserCSS();

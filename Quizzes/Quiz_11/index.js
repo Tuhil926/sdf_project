@@ -42,7 +42,7 @@ function update(text) {
   function validate_ans(){
       let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
       console.log(a);
-      if (a.display=="flex"&&a.justifyContent=="space-between"&&a.alignItems=="center"&&a.height=="200px"&&a.backgroundColor=="rgb(21, 82, 99)"&&a.color=="rgb(255, 111, 60)"&&a.fontSize=="20px" || document.getElementById("editor").value == "please"){
+      if ((a.display=="flex"&&a.justifyContent=="space-between"&&a.alignItems=="center"&&a.height=="200px"&&a.backgroundColor=="rgb(21, 82, 99)"&&a.color=="rgb(255, 111, 60)"&&a.fontSize=="20px" )|| document.getElementById("editor").value == "please"){
           return true;
       }else{
           console.log(window.getComputedStyle(document.getElementById("a")));

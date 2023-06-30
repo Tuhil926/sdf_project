@@ -110,18 +110,17 @@
             <div class="question">
                 <h1>Down to Earth</h1>
                 There is a container by class name "test". It contains 3 paragraph elements("Earth","To","Down").
-                <ul class="earthList">
-                    <li>Make it a flex-container with height 200px</li>
-                    <li>Change Background color to #BFA2DB</li>
-                    <li>Change font color to #FFD369 and a size of 24px</li>
-                    <li>Make necessary styling according to expected output</li>
+                <ul class="earthList msfl">
+                    <li class="msfl">Make it a flex-container with height 200px</li>
+                    <li class="msfl">Change Background color to #BFA2DB</li>
+                    <li class="msfl">Change font color to #FFD369 and a size of 24px</li>
+                    <li class="msfl">Make necessary styling according to expected output</li>
                 </ul>
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
 test{
     border: 10px solid palegoldenrod;
-}
-            </textarea>
+}</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>

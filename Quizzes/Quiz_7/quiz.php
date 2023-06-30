@@ -117,7 +117,7 @@
                 Note: border-radius is used to give an element curved corners, like the middle div.<br><br>
                 Hint: the middle div is invisible in the output because it's default height is zero<br>
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
 test1{
     fontSize: 30px;
     textAlign: center;
@@ -127,8 +127,7 @@ test1{
 #test2{
     backgroundColor: #8d8060;
     borderRadius: 40px;
-}
-            </textarea>
+}</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>

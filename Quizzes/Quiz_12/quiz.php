@@ -111,25 +111,24 @@
                 <h1>Final Exam</h1>
                 <p>You will be tested on all the topics covered in this course</p>
                 <p>There are two classes with names "test1" and "test2". Style them as per the following requirements</p>
-                <ul class="examList">
-                    <li>Make test1 a container of 200px height</li>
-                    <li>It's background color should be #6527BE</li>
-                    <li>Increase font size to 24px and color to #FF6666</li>
-                    <li>Make it look like it was striked off</li>
-                    <li>Make test2 a container of 200px</li>
-                    <li>Background color is #990000 and font color is #D4D925</li>
-                    <li>Size of text is 24px</li>
-                    <li>It's opacity should be 0.76</li>
-                    <li>It should have a #4E6C50 dotted border of 10px</li>
-                    <li>Style it using margin & flexbox according to the Expected output</li>
-                    <li>Good luck!</li>
+                <ul class="examList msfl">
+                    <li class="msfl">Make test1 a container of 200px height</li>
+                    <li class="msfl">It's background color should be #6527BE</li>
+                    <li class="msfl">Increase font size to 24px and color to #FF6666</li>
+                    <li class="msfl">Make it look like it was striked off</li>
+                    <li class="msfl">Make test2 a container of 200px</li>
+                    <li class="msfl">Background color is #990000 and font color is #D4D925</li>
+                    <li class="msfl">Size of text is 24px</li>
+                    <li class="msfl">It's opacity should be 0.76</li>
+                    <li class="msfl">It should have a #4E6C50 dotted border of 10px</li>
+                    <li class="msfl">Style it using margin & flexbox according to the Expected output</li>
+                    <li class="msfl">Good luck!</li>
                 </ul>
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
 .test{
     color: orange;
-}
-            </textarea>
+}</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>

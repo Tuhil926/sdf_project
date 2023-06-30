@@ -42,10 +42,10 @@ function update(text) {
   function validate_ans(){
       let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
       console.log(a);
-      if (a.fontSize == "30px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)" &&
+      if ((a.fontSize == "30px" && a.textAlign == "center" && a.color=="rgb(0, 0, 0)" && a.backgroundColor=="rgb(255, 255, 255)" &&
             a.borderLeft =="2px solid rgb(0, 0, 255)" && a.borderRight =="2px solid rgb(0, 0, 255)" &&  a.borderTop =="2px solid rgb(0, 0, 255)" &&  a.borderBottom =="2px solid rgb(0, 0, 255)" 
            &&  a.paddingLeft=="50px" &&   a.paddingRight=="50px" &&  a.paddingTop=="50px" &&  a.paddingBottom=="50px" && 
-           a.marginTop == "50px" &&   a.marginBottom == "50px" &&   a.marginLeft == "50px" &&   a.marginRight == "50px"  || document.getElementById("editor").value == "please") {
+           a.marginTop == "50px" &&   a.marginBottom == "50px" &&   a.marginLeft == "50px" &&   a.marginRight == "50px" ) || document.getElementById("editor").value == "please") {
           return true;
       }else{
           // console.log(window.getComputedStyle(document.getElementById("a")));

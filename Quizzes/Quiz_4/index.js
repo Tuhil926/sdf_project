@@ -44,7 +44,7 @@ function update(text) {
       let b= window.getComputedStyle(document.getElementById("non"));
       console.log(a);
       console.log(b);
-      if(a.color=="rgb(23, 89, 74)"&&a.fontSize=="24px"&&a.display=="block"&&a.borderBottom=="10px solid rgb(33, 51, 99)"&&a.borderTop=="10px solid rgb(33, 51, 99)"&&a.borderLeft=="10px solid rgb(33, 51, 99)"&&a.borderRight=="10px solid rgb(33, 51, 99)"&&b.display=="none" || document.getElementById("editor").value == "please"){
+      if((a.color=="rgb(23, 89, 74)"&&a.fontSize=="24px"&&a.display=="block"&&a.borderBottom=="10px solid rgb(33, 51, 99)"&&a.borderTop=="10px solid rgb(33, 51, 99)"&&a.borderLeft=="10px solid rgb(33, 51, 99)"&&a.borderRight=="10px solid rgb(33, 51, 99)"&&b.display=="none") || document.getElementById("editor").value == "please"){
           return true;
       }else{
           console.log(window.getComputedStyle(document.getElementById("a")));

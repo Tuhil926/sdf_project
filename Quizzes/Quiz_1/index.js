@@ -42,7 +42,7 @@ function update(text) {
   function validate_ans(){
       let a = window.getComputedStyle(document.getElementById("a"))
       console.log(a);
-      if (a.color=="rgb(255, 33, 113)" && a.fontSize=="64px" || document.getElementById("editor").value == "please"){
+      if ((a.color=="rgb(255, 33, 113)" && a.fontSize=="64px" )|| document.getElementById("editor").value == "please"){
           return true;
       }else{
           console.log(window.getComputedStyle(document.getElementById("a")));

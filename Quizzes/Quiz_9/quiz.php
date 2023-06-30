@@ -111,20 +111,18 @@
                 <h1>Tricky End</h1>
                 <h4>There is a container with class name "test". It contains several paragraph elements.</h4>
                 <ul class="trickList">
-                    <li>Make "test" a flex container with a height of 400px</li>
-                    <li>Change background color to #311D3F</li>
-                    <li>Change background color to #E23E57</li>
-                    <li>Make the font size to 16px</li>
-                    <li>Do the other styling according to expected output</li>
-                    <li>Think about for a while. Revisit the slides if needed</li>
+                    <li class="msfl">Make "test" a flex container with a height of 400px</li>
+                    <li class="msfl">Change background color to #311D3F</li>
+                    <li class="msfl">Change background color to #E23E57</li>
+                    <li class="msfl">Make the font size to 16px</li>
+                    <li class="msfl">Do the other styling according to expected output</li>
+                    <li class="msfl">Think about for a while. Revisit the slides if needed</li>
                 </ul>
                 <pre> </pre>
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
-#test{
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
     progress: none;
-}
-            </textarea>
+}</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>

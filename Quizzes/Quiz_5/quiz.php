@@ -113,17 +113,16 @@
                 Align the text inside the div to the centre and the entire div to the centre of the page . 
                 Additionaly give border to the div. Here are the details :
                 <ul class = "list">
-                    <li> Margin : 50px</li>
-                    <li>Padding : 50px </li>
-                    <li> Text Size: 30px and Align center</li>
-                    <li> BackgroundColor : white  </li>
-                    <li> border thickness ,type and color : 2px , solid and blue</li>
-
+                    <li class="msfl"> Margin : 50px</li>
+                    <li class="msfl">Padding : 50px </li>
+                    <li class="msfl"> Text Size: 30px and Align center</li>
+                    <li class="msfl"> BackgroundColor : white  </li>
+                    <li class="msfl"> border thickness ,type and color : 2px , solid and blue</li>
                 </ul>
 
             </div>
             <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ </textarea>
-            <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
+            <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */</code></pre>
         </div>
         <style id="result-style"></style>
         <!-- <iframe src="result.html" class="result"></iframe> -->

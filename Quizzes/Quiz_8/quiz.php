@@ -111,20 +111,19 @@
                 <h1>Justify Code</h1>
                 <h4>There is a container with class by name "test". It contains 5 paragraph elements without any class/id selectors.</h4>
                 <ul class="taskList">
-                    <li>Make the container a flex-container with a height of 400px</li>
-                    <li>Change it's background color to #B83B5E</li>
-                    <li>Get the paragraph elements into the middle of page</li>
-                    <li>Change their color to #F08A5D</li>
-                    <li>Make their font-size to 15px</li>
-                    <li>Align those paragraph elements into a column</li>
+                    <li class="msfl">Make the container a flex-container with a height of 400px</li>
+                    <li class="msfl">Change it's background color to #B83B5E</li>
+                    <li class="msfl">Get the paragraph elements into the middle of page</li>
+                    <li class="msfl">Change their color to #F08A5D</li>
+                    <li class="msfl">Make their font-size to 15px</li>
+                    <li class="msfl">Align those paragraph elements into a column</li>
                 </ul>
                 <pre> </pre>
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
 .test{
     display:none;
-}
-            </textarea>
+}</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>

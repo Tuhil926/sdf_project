@@ -110,18 +110,17 @@
             <div class="question">
                 <h1>End to End</h1>
                 There is a container with class name "test". It has 2 paragraph elements("End","End").
-                <ul class="endList">
-                    <li>Make it a flex-container with height 200px</li>
-                    <li>Change to background color to #155263</li>
-                    <li>Change color of text to #FF6F3C and font size to 20px</li>
-                    <li>Make necesary styling according expected output</li>
+                <ul class="endList msfl">
+                    <li class="msfl">Make it a flex-container with height 200px</li>
+                    <li class="msfl">Change to background color to #155263</li>
+                    <li class="msfl">Change color of text to #FF6F3C and font size to 20px</li>
+                    <li class="msfl">Make necesary styling according expected output</li>
                 </ul>
             </div>
-            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */ 
+            <textarea id="editor" class="language-css" autocomplete="off" autocapitalize="off" spellcheck="false" oninput="update(this.value);sync_scroll(this);applyUserCSS();try_show_newx_button()" onscroll="sync_scroll(this);" onkeydown="check_tab(this, event);">/* Write your code here */
 .test{
     font-size:6px;
-}
-            </textarea>
+}</textarea>
             <pre id="highlighting" aria-hidden="true"><code class="language-css" id="highlighting-content">/* Write your code here */ </code></pre>
         </div>
         <style id="result-style"></style>

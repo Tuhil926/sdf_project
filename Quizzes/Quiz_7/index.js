@@ -43,7 +43,12 @@ function update(text) {
       let a = window.getComputedStyle(document.getElementById("res1"));
       let b = window.getComputedStyle(document.getElementById("res2"));
       // console.log(b.backgroundColor);
-      if ((a.fontSize=="30px"&&a.textAlign=="center"&&a.margin=="20px"&&a.padding=="20px"&&a.backgroundColor=="rgb(203, 186, 142)"&&a.opacity=="0.5"&&b.height=="200px"&&b.backgroundColor=="rgb(141, 128, 96)"&&b.borderRadius=="40px") || document.getElementById("editor").value == "please"){
+      if ((a.fontSize=="30px"&&a.textAlign=="center"
+      &&a.margin=="20px"&&a.padding=="20px"&&
+      a.backgroundColor=="rgb(203, 186, 142)"&&
+      a.opacity=="0.5"&&b.height=="200px"&&
+      b.backgroundColor=="rgb(141, 128, 96)"&&
+      b.borderRadius=="40px") || document.getElementById("editor").value == "please"){
           return true;
       }else{
           // console.log(window.getComputedStyle(document.getElementById("a")));
@@ -59,8 +64,6 @@ function update(text) {
       }
   }
   
-  function next_click(){
-      alert("Congrats! You finished Essentials of CSS !")
-  }
+  
   update(document.getElementById("editor").value);
   applyUserCSS();

@@ -42,7 +42,10 @@ function update(text) {
   function validate_ans(){
       let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
       console.log(a);
-      if ((a.display=="flex"&&a.justifyContent=="space-between"&&a.alignItems=="center"&&a.height=="200px"&&a.backgroundColor=="rgb(21, 82, 99)"&&a.color=="rgb(255, 111, 60)"&&a.fontSize=="20px" )|| document.getElementById("editor").value == "please"){
+      if ((a.display=="flex"&&a.justifyContent=="space-between"&&
+      a.alignItems=="center"&&a.height=="200px"&&
+      a.backgroundColor=="rgb(21, 82, 99)"&&a.color=="rgb(255, 111, 60)"&&
+      a.fontSize=="20px" )|| document.getElementById("editor").value == "please"){
           return true;
       }else{
           console.log(window.getComputedStyle(document.getElementById("a")));
@@ -56,10 +59,6 @@ function update(text) {
       }else{
           document.getElementById("next").style.display = "none";
       }
-  }
-  
-  function next_click(){
-      alert("Congrats! You finished Quiz 11 !\nGet ready for Exam!")
   }
   update(document.getElementById("editor").value);
   applyUserCSS();

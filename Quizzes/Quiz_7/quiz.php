@@ -150,7 +150,7 @@ test1{
         
     </div>
 
-    <div id="next" onclick="next_click()"><a href="../../Advanced CSS/Lesson 1/index.php">Next</a></div>
+    <div id="next"><a href="../../Advanced CSS/Lesson 1/index.php">Next</a></div>
 </body>
 <script src="../../prism.js"></script>
 <script src="./index.js"></script>

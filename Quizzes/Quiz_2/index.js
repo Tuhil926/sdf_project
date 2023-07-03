@@ -43,7 +43,9 @@ function validate_ans() {
     
     let a = window.getComputedStyle(document.getElementById("a"));
     let b = window.getComputedStyle(document.getElementById("b"));
-    if ((a.fontSize=="30px"&&a.color=="rgb(255, 0, 0)"&&b.fontSize=="20px"&&b.color=="rgb(67, 37, 250)"&&a.textDecorationLine=="underline") || document.getElementById("editor").value == "please") {
+    if ((a.fontSize=="30px"&&a.color=="rgb(255, 0, 0)"&&b.fontSize=="20px"
+    &&b.color=="rgb(67, 37, 250)"&&a.textDecorationLine=="underline") || 
+    document.getElementById("editor").value == "please") {
         return true;
     } else {
         console.log(window.getComputedStyle(document.getElementById("a")));
@@ -57,8 +59,4 @@ function try_show_newx_button() {
     } else {
         document.getElementById("next").style.display = "none";
     }
-}
-
-function next_click() {
-    alert("Congrats! You finished Quiz 2!")
 }

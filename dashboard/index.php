@@ -56,7 +56,6 @@
                     <br>
                     <a href="../dashboard/index.php">DashBoard</a>
                     <br>
-                    <a href="#">Option 3</a>
                 </div>
             </div>
 

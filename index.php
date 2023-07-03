@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./Attributes/Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./Attributes/Favicon/favicon-16x16.png">
     <link rel="manifest" href="./Attributes/Favicon/site.webmanifest">
-    <title>Home page</title>
+    <title>PractiCSS</title>
 </head>
 <body>
     <header>

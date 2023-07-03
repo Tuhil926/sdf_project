@@ -44,7 +44,16 @@ function update(text) {
       let b = window.getComputedStyle(document.getElementsByClassName("test2")[0]);
       console.log(a);
       console.log(b);
-      if ((a.height=="200px"&&a.backgroundColor=="rgb(101, 39, 190)"&&a.color=="rgb(255, 102, 102)"&&a.fontSize=="24px"&&a.textDecorationLine=="line-through"&&b.display=="flex"&&b.flexDirection=="row"&&b.alignItems=="center"&&b.justifyContent=="space-evenly"&&b.height=="200px"&&b.fontSize=="24px"&&b.backgroundColor=="rgb(153, 0, 0)"&&b.color=="rgb(212, 217, 37)"&&b.marginTop=="40px"&&b.marginBottom=="40px"&&b.marginLeft=="40px"&&b.marginRight=="40px"&&b.opacity=="0.76"&&b.border=="10px dotted rgb(78, 108, 80)"&&b.borderRadius=="10px")||(document.getElementById("editor").value == "please")){
+      if ((a.height=="200px"&&a.backgroundColor=="rgb(101, 39, 190)"&&
+      a.color=="rgb(255, 102, 102)"&&a.fontSize=="24px"&&
+      a.textDecorationLine=="line-through"&&b.display=="flex"&&
+      b.flexDirection=="row"&&b.alignItems=="center"&&
+      b.justifyContent=="space-evenly"&&b.height=="200px"&&
+      b.fontSize=="24px"&&b.backgroundColor=="rgb(153, 0, 0)"&&
+      b.color=="rgb(212, 217, 37)"&&b.marginTop=="40px"&&
+      b.marginBottom=="40px"&&b.marginLeft=="40px"&&b.marginRight=="40px"&&
+      b.opacity=="0.76"&&b.border=="10px dotted rgb(78, 108, 80)"&&
+      b.borderRadius=="10px")||(document.getElementById("editor").value == "please")){
           return true;
       }else{
           // console.log(window.getComputedStyle(document.getElementById("a")));
@@ -58,10 +67,6 @@ function update(text) {
       }else{
           document.getElementById("next").style.display = "none";
       }
-  }
-  
-  function next_click(){
-      alert("Congrats! You completed the course!")
   }
   update(document.getElementById("editor").value);
   applyUserCSS();

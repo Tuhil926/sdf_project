@@ -32,7 +32,7 @@
     $connect = mysqli_connect($server, $Username, $Password, $database);
     session_start();
     $name = $_SESSION['UserName'];
-    if (!isset($_SESSION['progress'])  && $_SESSION['progress'] < 15)
+    if (!isset($_SESSION['progress'])  || $_SESSION['progress'] < 15)
         header('Location: ../../log_in/login.php');
     else {
         $result1 = mysqli_query($connect, "SELECT Progress from sign_in where UserName='$name';");
@@ -85,7 +85,6 @@
                     <br>
                     <a href="../../dashboard/index.php">DashBoard</a>
                     <br>
-                    <a href="#">Option 3</a>
                 </div>
             </div>
 

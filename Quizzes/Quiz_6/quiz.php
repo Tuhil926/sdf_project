@@ -48,7 +48,32 @@
     }
 
     ?>
-    <header>
+     <header>
+        <style>
+            #dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                left:94%;
+                width:6%;
+                display: none;
+                position: absolute;
+                border-radius: 10px;
+                background-color: rgb(255, 151, 54) ;
+                text-align:center;
+                
+                /* min-width: 160px; */
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+                /* margin-right: 10px; */
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+        </style>
         <img id="logo" src="../../Attributes/Images/logo.png" alt="logo">
         <div id="header-right">
             <button id="mode-switch"><span class="material-symbols-outlined">dark_mode</span></button>
@@ -63,6 +88,8 @@
                     <a href="#">Option 3</a>
                 </div>
             </div>
+
+            
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {

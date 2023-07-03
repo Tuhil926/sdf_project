@@ -9,18 +9,18 @@ body{
 #section-heading{
     text-align: center;
     font-family: Poppins;
-    background-color: #9BCDD2;
+    background-color: #0E2954;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    color:#F86F03;
+    color:#FFFAF4;
     width:100%;
 }
 #main-container{
     width:100%;
     height:600px;
-    background-color: #FF8551;
+    background-color: #F86F03;
     /* background-color: #205295; */
     display:flex;
     justify-content: center;

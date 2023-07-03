@@ -12,6 +12,6 @@ function createSlide()
     box.css("width",x+"px");
     x=588+2*a;
     $("#main-container").css("height",x+"px");
-    box.css("background-color","#408E91");
+    box.css("background-color","#116A7B");
 }
 // dark-mode: #2B2A4C

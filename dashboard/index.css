@@ -80,6 +80,11 @@ li{
     font-family: 'Ubuntu', sans-serif;
     color:white;
 }
+#linkToGit{
+    list-style:none;
+    font-family: 'Ubuntu', sans-serif;
+    color:white;
+}
 ul{
     margin:0;
     height:80px;

@@ -286,9 +286,7 @@
     <footer>
         <ul>
             <li>About Us</li>
-            <li>Privacy Policy</li>
-            <li>Do not sell my data</li>
-            <li>Contact Us</li>
+            <li><a id="linkToGit"style="text-decoration: none;" href="https://github.com/Tuhil926/sdf_project">Contact Us</a></li>
         </ul>
     </footer>
     <script src="./index.js"></script>

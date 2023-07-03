@@ -9,3 +9,9 @@ Dashboard:
         On Hover: changing opacity to 0.7;
     Motivation: #FFEBB7;
     Footer: #AD8E70;
+
+Slides:
+    Header-Background: #0E2954;
+    Header-Text: #FFFAF4;
+    Slide-Background: #116A7B;
+    Slide: #F86F03;

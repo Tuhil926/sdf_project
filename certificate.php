@@ -19,6 +19,8 @@
     ?>
     <script>
         function screenshot() {
+            document.getElementById("writing").style.marginTop = "75px";
+            document.getElementById("cert_comp").style.marginTop = "75px";
             html2canvas(document.getElementById("certificate")).then(function (canvas) {
                 var img = canvas.toDataURL("image/png");
                 saveAs(img, 'practiCSS_certificate.png');
@@ -27,6 +29,8 @@
                 // doc.addImage(img, "JPEG", 20, 20);
                 // doc.save("practiCSS_certificate.pdf");
             });
+            document.getElementById("writing").style.marginTop = "0";
+            document.getElementById("cert_comp").style.marginTop = "0";
         }
         function saveAs(uri, filename) {
             var link = document.createElement('a');
@@ -117,19 +121,25 @@
             display: flex;
             height: 75px;
             flex-direction: row;
+            /* top: 20px; */
             background-color: rgb(24, 22, 92);
         }
 
         #cert_comp {
+            /* background-color: white; */
+            width: 1000px;
+            text-align: center;
             font-size: 50px;
-            margin-left: 170px;
-            color: #ffb861;
+            /* margin-left: 170px; */
+            color: #FFB861;
             font-family: "Poppins";
+            margin-top: 0;
+            /* z-index: 3; */
         }
 
         #writing {
             width: 100%;
-            /* margin-top: 40px; */
+            margin-top: 0;
             font-size: 25px;
             font-family: "Poppins";
             line-height: 100px;
@@ -155,15 +165,19 @@
     <h1>Congratulations! You have completed this course!</h1>
     <h2>Here is your certificate for completion:</h2>
     <div id="certificate">
-        <div id="heading"><img src="./Attributes/Images/logo.png" alt="">
-            <div id="cert_comp">Certificate of Completion</div>
+        <div id="heading">
+            <img src="./Attributes/Images/logo.png" alt="">
+            <div id="cert_comp">
+                Certificate of Completion
+            </div>
         </div>
         <div id="writing">This is to certify that <br><span id="username">
                 <?php
                 echo $_SESSION['UserName'];
                 ?>
             </span><br> has completed the course
-            on <br><span id="css">css</span><br>by <span id="practicss">practiCSS</span>.</div>
+            on <br><span id="css">css</span><br>by <span id="practicss">practiCSS</span>.
+        </div>
     </div>
     <div id=download onclick="screenshot()">Download</div>
 </body>

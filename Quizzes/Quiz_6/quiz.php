@@ -64,6 +64,22 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var dropdownButton = document.getElementById('settings-switch');
+                var dropdownContent = document.querySelector('.dropdown-content');
+
+                dropdownButton.addEventListener('click', function() {
+                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!dropdownButton.contains(event.target)) {
+                        dropdownContent.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </header>
     <div class="quiz">
         <div class="left_panel">

@@ -41,7 +41,8 @@ show_output();
 
 function validate_ans() {
     let a = window.getComputedStyle(document.getElementById("a"))
-    if ((a.fontSize == "20px" && a.margin == "100px" && a.textAlign == "center") || document.getElementById("editor").value == "please") {
+    if ((a.fontSize == "20px" && a.margin == "100px" 
+    && a.textAlign == "center") || document.getElementById("editor").value == "please") {
         return true;
     } else {
         console.log(window.getComputedStyle(document.getElementById("a")));
@@ -57,6 +58,3 @@ function try_show_newx_button() {
     }
 }
 
-function next_click() {
-    alert("Congrats! You finished Quiz 6!")
-}

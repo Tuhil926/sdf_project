@@ -42,7 +42,11 @@ function update(text) {
   function validate_ans(){
       let a = window.getComputedStyle(document.getElementsByClassName("test")[0]);
       console.log(a);
-      if ((a.display=="flex"&&a.height=="200px"&&a.backgroundColor=="rgb(191, 162, 219)"&&a.color=="rgb(255, 211, 105)"&&a.fontSize=="24px"&&a.flexDirection=="row-reverse"&&a.justifyContent=="center"&&a.alignItems=="flex-end" )|| document.getElementById("editor").value == "please"){
+      if ((a.display=="flex"&&a.height=="200px"
+      &&a.backgroundColor=="rgb(191, 162, 219)"&&
+      a.color=="rgb(255, 211, 105)"&&a.fontSize=="24px"&&
+      a.flexDirection=="row-reverse"&&a.justifyContent=="center"&&
+      a.alignItems=="flex-end" )|| document.getElementById("editor").value == "please"){
           return true;
       }else{
           console.log(window.getComputedStyle(document.getElementById("a")));
@@ -56,10 +60,6 @@ function update(text) {
       }else{
           document.getElementById("next").style.display = "none";
       }
-  }
-  
-  function next_click(){
-      alert("Congrats! You finished Quiz 10!")
   }
   update(document.getElementById("editor").value);
   applyUserCSS();

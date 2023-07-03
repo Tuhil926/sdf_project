@@ -61,8 +61,6 @@ function update(text) {
       }
   }
   
-  function next_click(){
-      alert("Congrats! You finished Quiz 5!")
-  }
+  
   update(document.getElementById("editor").value);
   applyUserCSS();

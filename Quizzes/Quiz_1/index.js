@@ -57,7 +57,3 @@ function update(text) {
           document.getElementById("next").style.display = "none";
       }
   }
-  
-  function next_click(){
-      alert("Congrats! You finished Quiz 1!")
-  }
